@@ -7,6 +7,9 @@ import sys
 root = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(root / 'tools'))
 from package import DATA_FILES, ROOT_FILES
+from image_data import image_files
+
+image_paths = {p.relative_to(root).as_posix() for p in image_files(root)}
 
 source_folders = {'docs', 'installer', 'licenses', 'runtime', 'tests', 'tools'}
 allowed_suffixes = {'.cmd', '.cs', '.csproj', '.json', '.md', '.patch', '.ps1', '.py', '.txt'}
@@ -42,12 +45,15 @@ for entry in index.decode('utf-8').split('\0'):
     allowed = (
         name in ROOT_FILES
         or name in automation_files
+        or name in image_paths
         or (path.parts[0] == 'data' and path.as_posix()[5:] in DATA_FILES)
         or (path.parts[0] in source_folders and path.suffix in allowed_suffixes)
     )
     if not allowed or set(part.lower() for part in path.parts) & denied_parts:
         errors.append(f'{name}: outside the source inventory')
         continue
+    if name in image_paths and path.suffix == '.png':
+        continue  # Hash, PNG header, canvas and inventory were checked by image_files.
     try:
         content = (root / name).read_text(encoding='utf-8-sig')
     except UnicodeDecodeError:
@@ -60,6 +66,7 @@ for entry in index.decode('utf-8').split('\0'):
             errors.append(f'{name}: {label}')
 
 expected = set(ROOT_FILES) | {f'data/{name}' for name in DATA_FILES}
+expected |= image_paths
 errors.extend(f'{name}: missing required source' for name in sorted(expected - paths))
 if errors:
     sys.exit('\n'.join(errors))

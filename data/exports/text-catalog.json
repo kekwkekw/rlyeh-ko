@@ -2138,7 +2138,7 @@
       "id": "7f0758d308400df66265d6fa",
       "scope": "master:AutoSkillMasterData:12:text",
       "source": "次回攻撃時のみ攻撃力+[0,0,0]%、大きく後退させる攻撃を行う",
-      "target": "다음 공격에 한해 공격력 +[0,0,0]%, 적을 크게 뒤로 밀어내는 공격을 한다",
+      "target": "다음 공격에 한해 공격력 +[0,0,0]%, 적을 크게 밀어내는 공격을 한다",
       "sourceHash": "092d2c192bdada79dbcd340450881b014716e29bc3217c7f1ab3cead9d540a02",
       "reviewer": "Codex contextual review text-catalog-01",
       "kind": "exact"
@@ -27301,9 +27301,9 @@
       "id": "ui04-3c9d64565b07f679923503f1",
       "scope": "ui",
       "source": "チャレンジ報酬を達成して\r\n<color=#FFEFAD>★★</color>ルオシェン   を入手しよう！\r\n<scale=0.92>ゼウスを撃破し、真のエンディングを目指せ！</scale>",
-      "target": "도전 보상을 달성해\r\n<color=#FFEFAD>★★</color>루오셴을 획득하세요!\r\n<scale=0.92>제우스를 쓰러뜨리고 진정한 결말을 향해 나아가세요!</scale>",
+      "target": "도전 보상을 달성해\r\n<color=#FFEFAD>★★</color>루오셴   을 획득하세요!\r\n<scale=0.92>제우스를 쓰러뜨리고 진정한 결말을 향해 나아가세요!</scale>",
       "sourceHash": "3c9d64565b07f679923503f1338759830d02dbfac1be25f0b2f10be3cb1a518a",
-      "reviewer": "Codex contextual UI review 04 (not user-approved)",
+      "reviewer": "Codex contextual UI review 04 (not user-approved); Codex native class-icon spacing review 2026-11-20",
       "kind": "exact"
     },
     {
@@ -27778,9 +27778,9 @@
       "id": "ui04-9996087315668a658b308065",
       "scope": "ui",
       "source": "チャレンジ報酬を達成して\r\n<color=#FFEFAD>★★</color>ディシア   を入手しよう！\r\n<scale=0.92>クトゥグアを撃破し、真のエンディングを目指せ！</scale>",
-      "target": "도전 보상을 달성해\r\n<color=#FFEFAD>★★</color>디시아를 획득하세요!\r\n<scale=0.92>크투가를 쓰러뜨리고 진정한 결말을 향해 나아가세요!</scale>",
+      "target": "도전 보상을 달성해\r\n<color=#FFEFAD>★★</color>디시아   를 획득하세요!\r\n<scale=0.92>크투가를 쓰러뜨리고 진정한 결말을 향해 나아가세요!</scale>",
       "sourceHash": "9996087315668a658b308065a8676e1269dfa0f147ec14de14724892f304152e",
-      "reviewer": "Codex contextual UI review 04 (not user-approved)",
+      "reviewer": "Codex contextual UI review 04 (not user-approved); Codex native class-icon spacing review 2026-11-20",
       "kind": "exact"
     },
     {
@@ -27835,9 +27835,9 @@
       "id": "ui04-a05f2eb3fb6534183ee95084",
       "scope": "ui",
       "source": "チャレンジ報酬を達成して\r\n<color=#FFEFAD>★★</color>テトラ   を入手しよう！\r\n<scale=0.92>ノーデンスを撃破し、真のエンディングを目指せ！</scale>",
-      "target": "도전 보상을 달성해\r\n<color=#FFEFAD>★★</color>테트라를 획득하세요!\r\n<scale=0.92>노덴스를 쓰러뜨리고 진정한 결말을 향해 나아가세요!</scale>",
+      "target": "도전 보상을 달성해\r\n<color=#FFEFAD>★★</color>테트라   를 획득하세요!\r\n<scale=0.92>노덴스를 쓰러뜨리고 진정한 결말을 향해 나아가세요!</scale>",
       "sourceHash": "a05f2eb3fb6534183ee95084093a99fa01679ba2a4a0ff184bd6213fa9738dd2",
-      "reviewer": "Codex contextual UI review 04 (not user-approved)",
+      "reviewer": "Codex contextual UI review 04 (not user-approved); Codex native class-icon spacing review 2026-11-20",
       "kind": "exact"
     },
     {

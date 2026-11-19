@@ -17,7 +17,7 @@ internal static class GachaConfirmText
     private static void Postfix(GachaDrawConfirmPage __instance)
     {
         var ui = Plugin.Instance.Ui;
-        if (ui == null) return;
+        if (ui == null || !Plugin.Instance.Mode.Enabled) return;
         string? name = __instance.m_gachaButton?.CostWallet?.DisplayName;
         // Match the game's actual output, never infer a branch from ticket IDs,
         // cost, availability, or a banner title. Unrecognized templates stay native.

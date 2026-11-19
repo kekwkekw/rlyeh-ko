@@ -1,0 +1,164 @@
+{
+  "date": "2026-11-20",
+  "source_archive": "Rlyeh-Image-Final-Codex-Handoff-20261120.zip",
+  "archive_sha256": "d5349c4d5e68e104e43cf01b86bf93925125778b72adf61c0a4314a197598618",
+  "imported": 19,
+  "changed": 14,
+  "unchanged": 5,
+  "processing": "PNG bytes copied unchanged; native target name/scope/dimensions retained; no image recompression or color/alpha edits",
+  "catalog_sha256": "33c448c584cd959ed9a5cdcbdc65bde1cbb0f685eb5d0264489c7a4604ddd50f",
+  "items": [
+    {
+      "name": "gamestart_loading_image_01",
+      "scope": "",
+      "source_file": "02_loading/01_neon/korean.png",
+      "previous_sha256": "38e2037fd1e4bf672b45cbccc20f2ea5930c43a5867ad51a70deed23a10b68eb",
+      "sha256": "fbfd942d602ecac8cc9712da58c1d4fccdcfa943efc860e611c1607c876da1d7",
+      "changed": true
+    },
+    {
+      "name": "gamestart_loading_image_02",
+      "scope": "",
+      "source_file": "02_loading/02_elenoir/korean.png",
+      "previous_sha256": "11156e22d4d26c02b1bbf50dbb3a00bfc9ca4ea4ac895811d4711532fac48fb1",
+      "sha256": "bb5e9e7d65c40cc819c517b62257b2be8a3799e33b1e66a33cd18132f7153760",
+      "changed": true
+    },
+    {
+      "name": "gamestart_loading_image_03",
+      "scope": "",
+      "source_file": "02_loading/03_igna/korean.png",
+      "previous_sha256": "5d89f8424e74cd65ec83fc9348c580ef2a77e472998208a4d69722a07b186dae",
+      "sha256": "1f23ff1d59f8f5653f9e60b306b61951733fe02e5bcda535ba0c2e3281506477",
+      "changed": true
+    },
+    {
+      "name": "Title_Logo_Game_R18",
+      "scope": "",
+      "source_file": "01_title/title_logo/korean.png",
+      "previous_sha256": "5298deb7f7d7429ef11bf3bf360525687b21f1778bdbfb422b8e0f36f67dde46",
+      "sha256": "31ee243b215dfeaad304260410b0cc823c54117e25441b988efea5ec84f2cd25",
+      "changed": true
+    },
+    {
+      "name": "battledirection_wintext",
+      "scope": "",
+      "source_file": "03_battle/01_battledirection_wintext/korean.png",
+      "previous_sha256": "42a1f3c28d5c011fd5def68c171f8e3b65e16b7dfee9433a345c72937fccbb8c",
+      "sha256": "a60c7043b08cd63bb7c27e420fb146056e959c43ef76cc5822825e06f7638ad5",
+      "changed": true
+    },
+    {
+      "name": "battledirection_losetext",
+      "scope": "",
+      "source_file": "03_battle/03_battledirection_losetext/korean.png",
+      "previous_sha256": "aa274cf4491601216418eb6f5ff40491b8e0316b318812c6f5b6c01659b01b66",
+      "sha256": "cb0e6da35446aaa225e31bab49ec0e72b17a3b924d6d9177426cf6867eee018a",
+      "changed": true
+    },
+    {
+      "name": "battledirection_winlight",
+      "scope": "",
+      "source_file": "03_battle/02_battledirection_winlight/korean.png",
+      "previous_sha256": "2200181b3557cbe130102d4ac3f49801be380e0889b26b6cf5e79fc651449e10",
+      "sha256": "39eef2cf2a9905e78573ecd901f301594c9e6ddbe16e7371824a22b84c618c9b",
+      "changed": true
+    },
+    {
+      "name": "battledirection_losetextlight",
+      "scope": "",
+      "source_file": "03_battle/04_battledirection_losetextlight/korean.png",
+      "previous_sha256": "54256b0abf4a64a21b7573201a7ff199c2af7cdefa20f203e4c83b0be53d1046",
+      "sha256": "8c335e1e1662bc70c2b511024b79a7065e99dff10ab01bf60d50a229304f216f",
+      "changed": true
+    },
+    {
+      "name": "theme_logo",
+      "scope": "rogue:1",
+      "source_file": "04_apocalypse/theme_01/02_ingame_logo/korean.png",
+      "previous_sha256": "98d70ba19df22246d228d089e054bc48dd574eb5f18de64834d65ce70fd76c82",
+      "sha256": "98d70ba19df22246d228d089e054bc48dd574eb5f18de64834d65ce70fd76c82",
+      "changed": false
+    },
+    {
+      "name": "theme_title",
+      "scope": "rogue:1",
+      "source_file": "04_apocalypse/theme_01/01_selection_title/korean.png",
+      "previous_sha256": "1ed88ebd44fd78968b1d2e765e0cd1334ba644a95152851f8e132177209732d0",
+      "sha256": "ac9d6f1a19343b65dc12826d448249a8a7ca0cbae1269cb78f73dd97f1d5673c",
+      "changed": true
+    },
+    {
+      "name": "theme_logo",
+      "scope": "rogue:2",
+      "source_file": "04_apocalypse/theme_02/02_ingame_logo/korean.png",
+      "previous_sha256": "a68af17a53488d86ef4a550b510d1bea6007afab7d71fabafde428067ce4b250",
+      "sha256": "a68af17a53488d86ef4a550b510d1bea6007afab7d71fabafde428067ce4b250",
+      "changed": false
+    },
+    {
+      "name": "theme_title",
+      "scope": "rogue:2",
+      "source_file": "04_apocalypse/theme_02/01_selection_title/korean.png",
+      "previous_sha256": "287b9363d25e691a3036c499e10a18fd71fc01afb136ace039c2cc6d2834a7e3",
+      "sha256": "aa20a6a1235014e41592e412e8adb338bf372dba316475682bad2c092fb2abab",
+      "changed": true
+    },
+    {
+      "name": "theme_logo",
+      "scope": "rogue:3",
+      "source_file": "04_apocalypse/theme_03/02_ingame_logo/korean.png",
+      "previous_sha256": "bde76a8a615d73632f4c56587364d244d9943ebc4cc7c1dea5a09245dbddaad9",
+      "sha256": "bde76a8a615d73632f4c56587364d244d9943ebc4cc7c1dea5a09245dbddaad9",
+      "changed": false
+    },
+    {
+      "name": "theme_title",
+      "scope": "rogue:3",
+      "source_file": "04_apocalypse/theme_03/01_selection_title/korean.png",
+      "previous_sha256": "f9abf8c165bb272a49354aed3f25f2aea7a91c75d0d25b0a10ef6d3055c62425",
+      "sha256": "6f840b127e397cb268aec2db7d9c5c4255fc2768635e1539e8d064ab99b571b2",
+      "changed": true
+    },
+    {
+      "name": "theme_logo",
+      "scope": "rogue:4",
+      "source_file": "04_apocalypse/theme_04/02_ingame_logo/korean.png",
+      "previous_sha256": "a2962b4832695a1a422bb25f31c2e9b0e705f96834dd8e52c7c769cbf52c649a",
+      "sha256": "a2962b4832695a1a422bb25f31c2e9b0e705f96834dd8e52c7c769cbf52c649a",
+      "changed": false
+    },
+    {
+      "name": "theme_title",
+      "scope": "rogue:4",
+      "source_file": "04_apocalypse/theme_04/01_selection_title/korean.png",
+      "previous_sha256": "73c8a558a3087f954415b47902a6360f654b79109731a342c2c12302d430d7d0",
+      "sha256": "edf390d7d73cfd034efc206d16d3c030739a6154dcc660785c73508ce1e57324",
+      "changed": true
+    },
+    {
+      "name": "theme_logo",
+      "scope": "rogue:5",
+      "source_file": "04_apocalypse/theme_05/02_ingame_logo/korean.png",
+      "previous_sha256": "8d66ffa14bcc236ddd51f9151266dbf811122df2fe7187cc89899fc6b9849b51",
+      "sha256": "8d66ffa14bcc236ddd51f9151266dbf811122df2fe7187cc89899fc6b9849b51",
+      "changed": false
+    },
+    {
+      "name": "theme_title",
+      "scope": "rogue:5",
+      "source_file": "04_apocalypse/theme_05/01_selection_title/korean.png",
+      "previous_sha256": "5e82bc50c0d6a4217257f9e863f75f1c07ddde89c16f4aff4520d5d60fde116d",
+      "sha256": "178d5a4b7537032ef32c2ad4a1966284f81c9c6573ddeed47578ba78d728be9c",
+      "changed": true
+    },
+    {
+      "name": "gamestart_loading_image_04",
+      "scope": "",
+      "source_file": "02_loading/04_shizel-me/korean.png",
+      "previous_sha256": "ba10b0102438d50570adbdaba8c8fa521840c918677fc01e17fea182099a9b77",
+      "sha256": "889a107f37258065248719c723201361efc5b13242244f9aa542d72fa50bf7b4",
+      "changed": true
+    }
+  ]
+}

@@ -1,15 +1,17 @@
 """Build an offline installer archive from explicit local inputs. Never installs or downloads."""
 from pathlib import Path
 import argparse, hashlib, json, shutil, zipfile
+from image_data import image_files
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '0.1.0'
-DATE = (2026, 11, 13, 0, 0, 0)
+VERSION = '0.2.0'
+DATE = (2026, 11, 20, 0, 0, 0)
 SOURCE_ZIPS = ['hdTrans-0.9.5-source.zip', 'BepInEx-be.785-source.zip',
                'Il2CppInterop-1.5.3-rlyeh-source.zip', 'UnityDoorstop-4.5.0-source.zip',
                'Dobby-1.0.5-source.zip', 'NotoSerifCJKkr-font-source.zip']
-ROOT_FILES = ['.gitignore','.gitattributes','LICENSE','README.md','SOURCE_CODE.md','THIRD_PARTY.md','build.ps1','inputs.lock.json']
-DATA_FILES = ['canonical/glossary.json','exports/exact.json','exports/manifest.json','exports/names.txt',
+ROOT_FILES = ['.gitignore','.gitattributes','LICENSE','README.md','SOURCE_CODE.md','THIRD_PARTY.md','build.ps1','inputs.lock.json',
+              '.github/workflows/ci.yml','.github/scripts/audit-source.py']
+DATA_FILES = ['canonical/glossary.json','scenario/reviewed.json','exports/exact.json','exports/manifest.json','exports/names.txt',
               'exports/text-catalog.json','exports/userdict.txt','text/compositions.json','text/observed-ui.json','text/reviewed.json']
 DENIED = {'.git','bin','obj','__pycache__','_glossary_runs','cache','evidence'}
 
@@ -18,6 +20,7 @@ def sha(path):
 
 def source_files():
     files = [ROOT / f for f in ROOT_FILES] + [ROOT/'data'/f for f in DATA_FILES]
+    files += image_files(ROOT)
     for folder in ('runtime','tests','tools','licenses','docs','installer'):
         files += [p for p in (ROOT/folder).rglob('*') if p.is_file() and not (set(p.relative_to(ROOT).parts) & DENIED)
                   and p.suffix.lower() not in ('.dll','.pdb','.exe','.pyc','.log')]
@@ -76,6 +79,8 @@ def main():
     for name in ('exact.json','manifest.json','names.txt','text-catalog.json','userdict.txt'):
         copy(ROOT/'data/exports'/name,plugin+'glossary/'+name)
     for name in ('notoserifcjkkr-bold.bundle','OFL.txt'): copy(args.font_root/name,plugin+'fonts/'+name)
+    for path in image_files(ROOT): copy(path, plugin + 'images/' + path.relative_to(ROOT/'data/images').as_posix())
+    copy(ROOT/'data/scenario/reviewed.json', plugin+'scenario/reviewed.json')
     with zipfile.ZipFile(args.hdtrans_zip) as z:
         for name in ('hdTransEngine.dll','hdtrans-data/dicts.hdsnap'):
             data=z.read(name)
@@ -95,7 +100,7 @@ def main():
     copy(out/source_name,'sources/'+source_name)
     contents=[{'path':p.relative_to(package).as_posix(),'size':p.stat().st_size,'sha256':sha(p)}
               for p in sorted(package.rglob('*')) if p.is_file()]
-    manifest={'schema':1,'version':VERSION,'preparedDate':'2026-11-13','hdTrans':'0.9.5',
+    manifest={'schema':1,'version':VERSION,'preparedDate':'2026-11-20','hdTrans':'0.9.5',
               'status':'stable','files':contents}
     (package/'package.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     archive(out/(package.name+'.zip'),[(package.name+'/'+p.relative_to(package).as_posix(),p) for p in package.rglob('*') if p.is_file()])

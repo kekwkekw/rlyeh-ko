@@ -9,6 +9,10 @@
   <ItemGroup Condition="'$(UiLayoutProbe)'=='true'"><Compile Include="..\..\tests\UiLayoutProbe.cs" /></ItemGroup>
   <PropertyGroup Condition="'$(TmpRegressionProbe)'=='true'"><DefineConstants>$(DefineConstants);TMP_REGRESSION_PROBE</DefineConstants></PropertyGroup>
   <ItemGroup Condition="'$(TmpRegressionProbe)'=='true'"><Compile Include="..\..\tests\TmpRegressionProbe.cs" /></ItemGroup>
+  <PropertyGroup Condition="'$(ImageProbe)'=='true'"><DefineConstants>$(DefineConstants);IMAGE_PROBE</DefineConstants></PropertyGroup>
+  <ItemGroup Condition="'$(ImageProbe)'=='true'"><Compile Include="..\..\tests\ImageProbe.cs" /></ItemGroup>
+  <PropertyGroup Condition="'$(ScenarioProbe)'=='true'"><DefineConstants>$(DefineConstants);SCENARIO_PROBE</DefineConstants></PropertyGroup>
+  <ItemGroup Condition="'$(ScenarioProbe)'=='true'"><Compile Include="..\..\tests\ScenarioProbe.cs" /></ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Rlyeh.Localizer.Core\Rlyeh.Localizer.Core.csproj" />
     <Reference Include="$(LoaderDir)\*.dll" Exclude="$(LoaderDir)\dobby.dll"><Private>false</Private></Reference>

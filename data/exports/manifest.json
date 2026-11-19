@@ -1,13 +1,13 @@
 {
   "status": "reviewed",
-  "canonical_revision": "7384e18d28f261dd900a899781cb276252ff8ffbc2c708fbf0ca5a6ca6a6b614",
-  "entries": 252,
-  "names": 95,
-  "userdict": 65,
-  "exact": 187,
+  "canonical_revision": "4d024abb53f192529775250559d443fc94e7b0c8dd980dc03bde3500722697f1",
+  "entries": 504,
+  "names": 151,
+  "userdict": 90,
+  "exact": 413,
   "files": {
-    "names.txt": "48253a1297a230a708181c0504cf100072ef0f19d9f9a79239f7f916b8fa3244",
-    "userdict.txt": "47a83acabe7b7879bf599390fb9e9b7867e4d2b84e4c614baad837c7d0751e71",
-    "exact.json": "5bfb3fd07aca938f1b5330bd1c3db9349d7f55e3bc94c3e8b024fceebad981c6"
+    "names.txt": "c89a18e40b7424ade1d1ea267e907c8d261e8df1f4a4174e247c20c241775f40",
+    "userdict.txt": "9172132d07f3a4b54a90fcf4452d01a04cdb3e3caceed3abb50258cf32f62ecc",
+    "exact.json": "54433eaf1dda870cea69fac69f803a2362061073b755ff2f6c086590c4bf58ad"
   }
 }

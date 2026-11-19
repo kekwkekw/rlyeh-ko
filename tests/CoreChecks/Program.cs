@@ -3,6 +3,14 @@ using System.Text.Json;
 
 void Check(bool result, string label) { if (!result) throw new Exception(label); Console.WriteLine("PASS " + label); }
 UiDecorationChecks.Run(Check);
+ImageCatalogChecks.Run(Check);
+ScenarioChecks.Run(Check);
+LocalizationSwitchChecks.Run(Check);
+MasterDisplayChecks.Run(Check);
+string scenarioData = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "../../../../../data/scenario/reviewed.json"));
+Check(File.Exists(scenarioData), "checked-in scenario catalog is present");
+var actualScenarios = ScenarioCatalog.Load(scenarioData);
+Console.WriteLine("PASS checked-in reviewed scenario catalog: " + actualScenarios.Count);
 var doc = new DisplayText("<color=red>こんにちは</color><interval=0.2>、<speed=2>世界！");
 Check(doc.Plain == "こんにちは、世界！", "one complete request without control tags");
 string restored = doc.Restore("안녕하세요, 세계!");
@@ -72,7 +80,12 @@ refused = false;
 try { TextCatalog.ValidateControls("{0}文字まで入力可能", "0자까지 입력 가능"); }
 catch (InvalidDataException) { refused = true; }
 Check(refused, "composite formatting placeholders cannot become literal numbers");
-if (args.Length == 3 && args[0] == "--native-catalog")
+if (args.Length == 2 && args[0] == "--scenario-catalog")
+{
+    Check(File.Exists(args[1]), "requested scenario catalog is present");
+    Console.WriteLine("PASS scenario catalog: " + ScenarioCatalog.Load(args[1]).Count);
+}
+else if (args.Length == 3 && args[0] == "--native-catalog")
 {
     var nativeCatalog = TextCatalog.Load(args[2]);
     using var fixtures = JsonDocument.Parse(File.ReadAllText(args[1]));
@@ -142,10 +155,20 @@ else if ((args.Length == 3 || args.Length == 4) && args[0] == "--service")
     foreach (var request in reviewRequests.RootElement.EnumerateArray())
     {
         string key="review:"+request.GetProperty("id").GetString();
-        Check(request.TryGetProperty("exact",out var exactValue) ? results[key]==exactValue.GetString() :
+        if (request.TryGetProperty("plainContains", out var plainValue))
+        {
+            // Formatting anchors may lie inside a translated word. Compare the
+            // visible text while checking every original control is retained.
+            var actual = new DisplayText(results[key], ui: request.GetProperty("scope").GetString() == "ui");
+            Check(actual.Plain.Contains(plainValue.GetString()!, StringComparison.Ordinal), key + " visible text");
+            TextCatalog.ValidateControls(request.GetProperty("source").GetString()!, results[key]);
+            Check(true, key + " controls");
+        }
+        else Check(request.TryGetProperty("exact",out var exactValue) ? results[key]==exactValue.GetString() :
             results[key].Contains(request.GetProperty("contains").GetString()!,StringComparison.Ordinal), key);
     }
     foreach(var result in results) Console.WriteLine(result.Key+" => "+result.Value);
+    LocalizationSwitchChecks.Service(service, Check);
 }
 else if (args.Length == 3 && args[0] == "--warm-service")
 {
@@ -162,7 +185,11 @@ else if (args.Length == 3 && args[0] == "--warm-service")
     Check(initialized, "warm service loaded the persisted dictionary revision");
     UiDecorationChecks.Service(service, Check);
     Check(service.TryGetReady("<scale=0.9>今日はいい天気ですね。", "ui", out string decoratedUi) && decoratedUi.StartsWith("<scale=0.9>") && decoratedUi.Any(c => c >= '가' && c <= '힣'), "different whole-label presentation reuses persisted UI body cache");
-    Check(!service.TryGetReady("<scale=0.7>ネオン", "ui", out _), "decorated UI cannot consume speaker-only exact overrides");
+    // A played game can legitimately have both UI and speaker caches for this name.
+    bool uiNameReady = service.TryGetReady("ネオン", "ui", out string uiName);
+    bool decoratedNameReady = service.TryGetReady("<scale=0.7>ネオン", "ui", out string decoratedName);
+    Check(decoratedNameReady == uiNameReady && (!decoratedNameReady || decoratedName == "<scale=0.7>" + uiName),
+        "decorated names follow UI-scope readiness, including legitimate persisted UI translations");
     Check(service.TryGetReady("――ルルイエへ。", "story-test", out string cached) && cached.Contains("루루이에"),
         "persisted hdTrans text is available without a request or callback");
     Check(!service.TryGetReady("――ルルイエへ。", "different-scope", out _),

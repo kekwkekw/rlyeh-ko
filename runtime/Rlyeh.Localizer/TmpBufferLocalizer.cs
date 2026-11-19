@@ -72,6 +72,18 @@ internal sealed class TmpBufferLocalizer
             if (!measuring) Discard(id);
             return null;
         }
+        if (!plugin.Mode.Enabled)
+        {
+            // Keep native inputs observable while OFF so startup-OFF and pooled
+            // persistent labels can be rebuilt on ON, without an object scan.
+            if (!measuring && !Protected(text, source!))
+            {
+                if (!states.TryGetValue(id, out var native) || native.Text != text)
+                    states[id] = native = new() { Text = text };
+                native.Slot.Begin(source!);
+            }
+            return null;
+        }
         if (Protected(text, source!))
         {
             if (!measuring) Discard(id);
@@ -120,7 +132,7 @@ internal sealed class TmpBufferLocalizer
     private bool Current(State state, long revision, string source)
     {
         var text = state.Text;
-        return state.Slot.Accepts(revision, source) && text && text.m_inputSource == state.Mode &&
+        return plugin.Mode.Enabled && state.Slot.Accepts(revision, source) && text && text.m_inputSource == state.Mode &&
             UiLocalizer.Context(text) == state.Context && !Protected(text, source) &&
             (state.Mode is TMP_Text.TextInputSources.TextString or TMP_Text.TextInputSources.TextInputBox
                 ? text.m_text == state.Raw : ReadBuffer(text) == source);
@@ -164,7 +176,7 @@ internal sealed class TmpBufferLocalizer
     }
     internal void ApplyLayouts()
     {
-        if (layingOut) return;
+        if (!plugin.Mode.Enabled || layingOut) return;
         layingOut = true;
         try
         {
@@ -190,6 +202,27 @@ internal sealed class TmpBufferLocalizer
         foreach (int id in states.Where(p => !p.Value.Text).Select(p => p.Key).ToArray())
         { states[id].Slot.Invalidate(); states.Remove(id); layouts.Remove(id); retries.Remove(id); measurements.Remove(id); }
         foreach (int id in layouts.Where(p => !p.Value.Text).Select(p => p.Key).ToArray()) layouts.Remove(id);
+    }
+    internal void ResetForMode()
+    {
+        var texts = states.Values.Select(x => x.Text).ToArray();
+        foreach (var state in states.Values) state.Slot.Invalidate();
+        states.Clear(); layouts.Clear(); retries.Clear(); measurements.Clear();
+        foreach (var text in texts)
+        {
+            if (!text) continue;
+            try
+            {
+                // Reuse the untouched native binding; never write a translated
+                // or reverse-translated string back into the generic TMP source.
+                if (text.m_inputSource is TMP_Text.TextInputSources.TextString or TMP_Text.TextInputSources.TextInputBox)
+                    text.ParseInputText();
+                else text.PopulateTextProcessingArray();
+                text.havePropertiesChanged = true;
+                text.SetVerticesDirty(); text.SetLayoutDirty();
+            }
+            catch (Exception ex) { Warn("TMP mode rebuild: " + ex.Message); }
+        }
     }
     private void Discard(int id)
     {

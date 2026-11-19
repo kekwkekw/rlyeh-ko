@@ -3,7 +3,9 @@ using Rog.MasterData;
 
 namespace Rlyeh.Localizer;
 
-// Change only display return values; master records, skill state and calculations stay native.
+// Preserve native return values: long-lived Active/Special/PassiveSkillModel.Text
+// fields cache these strings. Publish reviewed pairs to the common UI buffer
+// instead, so OFF and ON can always reuse the original native binding.
 internal static class MasterDisplay
 {
     private static readonly HashSet<string> traced = new();
@@ -28,9 +30,10 @@ internal static class MasterDisplay
         bool hit = comparison == null
             ? plugin.Service.Catalog.TryRenderMaster(scope, source, original, resolve, out var target)
             : plugin.Service.Catalog.TryRenderMasterDiff(scope, source, original, resolve, comparison, format!, out target);
-        if (hit) display = target;
+        if (hit && !plugin.Service.MasterDisplays.Register(original, target))
+            plugin.Log.LogWarning("Conflicting reviewed Master display pair; native UI fallback retained: " + scope);
         if (plugin.TraceCatalog && traced.Count < 10000 && traced.Add(scope+":"+level+":"+original))
-            plugin.Log.LogInfo($"CATALOG {(comparison == null ? "text" : "diff")} hit={hit} scope={scope} level={level} original={original} translated={display}");
+            plugin.Log.LogInfo($"CATALOG {(comparison == null ? "text" : "diff")} hit={hit} scope={scope} level={level} original={original} translated={(hit ? target : display)}; native binding preserved");
     }
 }
 [HarmonyPatch(typeof(SkillData), nameof(SkillData.GetText))]
