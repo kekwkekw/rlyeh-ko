@@ -12,6 +12,13 @@ g = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(g)
 
 class ReviewTests(unittest.TestCase):
+    def test_shipped_exports_match_canonical_review_and_manifest(self):
+        data = Path(__file__).resolve().parents[1]/'data'
+        content, manifest = g.render_exports(json.loads((data/'canonical/glossary.json').read_text(encoding='utf-8')))
+        self.assertEqual(manifest, json.loads((data/'exports/manifest.json').read_text(encoding='utf-8')))
+        for name, value in content.items():
+            self.assertEqual(value.encode('utf-8'), (data/'exports'/name).read_bytes(), name)
+
     def setUp(self):
         self.test_root = (Path(__file__).parent/'_glossary_runs').resolve()
         self.test_root.mkdir(exist_ok=True)

@@ -42,30 +42,31 @@ internal sealed class UiLocalizer
         if (Time.realtimeSinceStartup < nextScan) return;
         nextScan = Time.realtimeSinceStartup + 1;
         UiReadability.PruneDestroyedViews();
-        // Serialized labels may never call a setter. Scan active labels only once a second.
-        foreach (var text in UnityEngine.Object.FindObjectsOfType<UnityEngine.UI.Text>()) Queue(text);
         foreach (int id in owners.Where(p => !p.Value).Select(p => p.Key).ToArray()) { owners.Remove(id); states.Remove(id); }
         Tmp.Prune();
+        if (!plugin.Mode.Enabled) return;
+        // Serialized labels may never call a setter. Scan active labels only once a second.
+        foreach (var text in UnityEngine.Object.FindObjectsOfType<UnityEngine.UI.Text>()) Queue(text);
     }
     public void Queue(UnityEngine.UI.Text text)
     {
-        if (applying || !text || !text.isActiveAndEnabled || text.TryCast<UguiNovelText>() != null || plugin.StoryNameIds.Contains(text.GetInstanceID())) return;
+        if (!plugin.Mode.Enabled || applying || !text || !text.isActiveAndEnabled || text.TryCast<UguiNovelText>() != null || plugin.StoryNameIds.Contains(text.GetInstanceID())) return;
         var input = text.GetComponentInParent<UnityEngine.UI.InputField>();
         if (input && input.textComponent == text) return;
         string source = text.text ?? "";
         owners[text.GetInstanceID()] = text;
-        if (HasKorean(source)) text.font = plugin.GetKoreanFont();
+        if (HasKorean(source)) plugin.EnsureUguiFont(text);
         if (!HasJapanese(source)) return;
         string context = Context(text);
         Request(text.GetInstanceID(), source, context, () => text && text.isActiveAndEnabled && Context(text) == context ? text.text : null, result =>
         {
-            text.font = plugin.GetKoreanFont();
+            plugin.EnsureUguiFont(text);
             text.text = result;
         });
     }
     internal void ApplyBoundFormat(TMP_Text? text, string template, string? nativeName, int numericSlots)
     {
-        if (applying || text is null || !text) return;
+        if (!plugin.Mode.Enabled || applying || text is null || !text) return;
         string source = TmpBufferLocalizer.ReadCurrentSource(text) ?? "";
         owners[text.GetInstanceID()] = text;
         if (!BoundUiFormat.TryBind(plugin.Service.Catalog, template, source, nativeName, numericSlots, out var bound)) return;
@@ -94,7 +95,7 @@ internal sealed class UiLocalizer
     }
     internal void EnsureTmpFont(TMP_Text text)
     {
-        if (!text.font) return;
+        if (!plugin.Mode.Enabled || !text.font) return;
         if (!fallback)
         {
             var font = plugin.GetKoreanFont();
@@ -142,7 +143,7 @@ internal sealed class UiLocalizer
     private bool Request(int id, string source, string context, Func<string?>? read, Action<string> apply,
         string? translationSource = null, Func<string, string>? compose = null)
     {
-        if (string.IsNullOrWhiteSpace(source) || source.Length > 6000 || !HasJapanese(source) ||
+        if (!plugin.Mode.Enabled || string.IsNullOrWhiteSpace(source) || source.Length > 6000 || !HasJapanese(source) ||
             !HasJapanese(new DisplayText(source).Plain)) return false;
         states.TryGetValue(id, out var state);
         if (state != null && context == state.Context && source == state.Target) return true;
@@ -171,11 +172,39 @@ internal sealed class UiLocalizer
     }
     private void Apply(UiState state, string source, string result, Action<string> apply)
     {
+        if (!plugin.Mode.Enabled) return;
         state.Target = result;
         applying = true;
         try { apply(result); }
         catch (Exception ex) { state.Target = source; plugin.Log.LogWarning("UI apply: " + ex.Message); }
         finally { applying = false; }
+    }
+    internal void ResetForMode()
+    {
+        applying = true;
+        try
+        {
+            foreach (var (id, state) in states)
+            {
+                try
+                {
+                    if (state.Target != null && state.Slot.Source.Length > 0 && owners.TryGetValue(id, out var owner) && owner && Context(owner) == state.Context)
+                    {
+                        var legacy = owner.TryCast<UnityEngine.UI.Text>();
+                        var tmp = owner.TryCast<TMP_Text>();
+                        if (legacy && legacy!.text == state.Target) legacy.text = state.Slot.Source;
+                        else if (tmp && TmpBufferLocalizer.ReadCurrentSource(tmp!) == state.Target) tmp!.text = state.Slot.Source;
+                    }
+                }
+                catch (Exception ex) { plugin.Log.LogWarning("UI mode restore: " + ex.Message); }
+                state.Slot.Invalidate();
+            }
+            states.Clear();
+        }
+        finally { applying = false; }
+        UiReadability.Restore();
+        Tmp.ResetForMode();
+        nextScan = 0;
     }
 }
 

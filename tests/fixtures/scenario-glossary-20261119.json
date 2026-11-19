@@ -1,0 +1,1070 @@
+[
+  {
+    "id": "glossary05-000",
+    "source": "夢見の館",
+    "scope": "speaker",
+    "exact": "꿈의 저택"
+  },
+  {
+    "id": "glossary05-001",
+    "source": "夢見の館の力だ。",
+    "scope": "story-test",
+    "contains": "꿈의 저택"
+  },
+  {
+    "id": "glossary05-002",
+    "source": "たんぽぽ急便",
+    "scope": "speaker",
+    "exact": "민들레 택배"
+  },
+  {
+    "id": "glossary05-003",
+    "source": "たんぽぽ急便の力だ。",
+    "scope": "story-test",
+    "contains": "민들레 택배"
+  },
+  {
+    "id": "glossary05-004",
+    "source": "ムー",
+    "scope": "speaker",
+    "exact": "무"
+  },
+  {
+    "id": "glossary05-005",
+    "source": "ムーの力だ。",
+    "scope": "story-test",
+    "contains": "무"
+  },
+  {
+    "id": "glossary05-006",
+    "source": "猫将軍",
+    "scope": "speaker",
+    "exact": "고양이 장군"
+  },
+  {
+    "id": "glossary05-007",
+    "source": "猫将軍の力だ。",
+    "scope": "story-test",
+    "contains": "고양이 장군"
+  },
+  {
+    "id": "glossary05-008",
+    "source": "闇に吠えるもの",
+    "scope": "speaker",
+    "exact": "어둠에 울부짖는 자"
+  },
+  {
+    "id": "glossary05-009",
+    "source": "闇に吠えるものの力だ。",
+    "scope": "story-test",
+    "contains": "어둠에 울부짖는 자"
+  },
+  {
+    "id": "glossary05-010",
+    "source": "デービー・ジョーンズ",
+    "scope": "speaker",
+    "exact": "데이비 존스"
+  },
+  {
+    "id": "glossary05-011",
+    "source": "デービー・ジョーンズの力だ。",
+    "scope": "story-test",
+    "contains": "데이비 존스"
+  },
+  {
+    "id": "glossary05-012",
+    "source": "スクアーラ・スカーズ",
+    "scope": "speaker",
+    "exact": "스쿠아라 스카즈"
+  },
+  {
+    "id": "glossary05-013",
+    "source": "スクアーラ・スカーズの力だ。",
+    "scope": "story-test",
+    "contains": "스쿠아라 스카즈"
+  },
+  {
+    "id": "glossary05-014",
+    "source": "アトラック＝ナチャ",
+    "scope": "speaker",
+    "exact": "아틀락=나차"
+  },
+  {
+    "id": "glossary05-015",
+    "source": "アトラック＝ナチャの力だ。",
+    "scope": "story-test",
+    "contains": "아틀락=나차"
+  },
+  {
+    "id": "glossary05-016",
+    "source": "アフーム＝ザー",
+    "scope": "speaker",
+    "exact": "아훔=자"
+  },
+  {
+    "id": "glossary05-017",
+    "source": "アフーム＝ザーの力だ。",
+    "scope": "story-test",
+    "contains": "아훔=자"
+  },
+  {
+    "id": "glossary05-018",
+    "source": "テンシ",
+    "scope": "story-test",
+    "contains": "천사"
+  },
+  {
+    "id": "glossary05-019",
+    "source": "カミサマ",
+    "scope": "story-test",
+    "contains": "신님"
+  },
+  {
+    "id": "glossary05-020",
+    "source": "クリスタライザー",
+    "scope": "story-test",
+    "contains": "결정화 장치"
+  },
+  {
+    "id": "glossary05-021",
+    "source": "夢見人",
+    "scope": "story-test",
+    "contains": "꿈꾸는 자"
+  },
+  {
+    "id": "glossary05-022",
+    "source": "死体泥棒の麻袋",
+    "scope": "story-test",
+    "contains": "시체 도둑의 삼베 자루"
+  },
+  {
+    "id": "glossary05-023",
+    "source": "辻裁判",
+    "scope": "story-test",
+    "contains": "길거리 재판"
+  },
+  {
+    "id": "glossary05-024",
+    "source": "風薙ぎ",
+    "scope": "story-test",
+    "contains": "광풍기"
+  },
+  {
+    "id": "glossary05-025",
+    "source": "無貌の神",
+    "scope": "story-test",
+    "contains": "얼굴 없는 신"
+  },
+  {
+    "id": "glossary05-026",
+    "source": "にゃー様",
+    "scope": "speaker",
+    "exact": "냐 님"
+  },
+  {
+    "id": "glossary05-027",
+    "source": "にゃー様の力だ。",
+    "scope": "story-test",
+    "contains": "냐 님"
+  },
+  {
+    "id": "glossary05-028",
+    "source": "雷鳴のアクィラ",
+    "scope": "speaker",
+    "exact": "뇌명의 아퀼라"
+  },
+  {
+    "id": "glossary05-029",
+    "source": "立花山城",
+    "scope": "speaker",
+    "exact": "타치바나야마성"
+  },
+  {
+    "id": "glossary05-030",
+    "source": "四将",
+    "scope": "speaker",
+    "exact": "네 장수"
+  },
+  {
+    "id": "glossary05-031",
+    "source": "にゃー様",
+    "scope": "speaker",
+    "exact": "냐 님"
+  },
+  {
+    "id": "glossary05-032",
+    "source": "腰巾着のヴァイス",
+    "scope": "speaker",
+    "exact": "아첨꾼 바이스"
+  },
+  {
+    "id": "glossary05-033",
+    "source": "のんびり屋の生徒",
+    "scope": "speaker",
+    "exact": "느긋한 학생"
+  },
+  {
+    "id": "glossary05-034",
+    "source": "有翼のヴァイス",
+    "scope": "speaker",
+    "exact": "날개 달린 바이스"
+  },
+  {
+    "id": "glossary05-035",
+    "source": "伝書係の魔術師",
+    "scope": "speaker",
+    "exact": "전령 마술사"
+  },
+  {
+    "id": "glossary05-036",
+    "source": "道行くヴァイス",
+    "scope": "speaker",
+    "exact": "지나가던 바이스"
+  },
+  {
+    "id": "glossary05-037",
+    "source": "こわもてヴァイス",
+    "scope": "speaker",
+    "exact": "험상궂은 바이스"
+  },
+  {
+    "id": "glossary05-038",
+    "source": "ガラの悪いヴァイス",
+    "scope": "speaker",
+    "exact": "불량스러운 바이스"
+  },
+  {
+    "id": "glossary05-039",
+    "source": "天然なヴァイス",
+    "scope": "speaker",
+    "exact": "엉뚱한 바이스"
+  },
+  {
+    "id": "glossary05-040",
+    "source": "馴染みの配達員",
+    "scope": "speaker",
+    "exact": "낯익은 배달원"
+  },
+  {
+    "id": "glossary05-041",
+    "source": "勝気な魔術師",
+    "scope": "speaker",
+    "exact": "지기 싫어하는 마술사"
+  },
+  {
+    "id": "glossary05-042",
+    "source": "配達屋",
+    "scope": "speaker",
+    "exact": "배달원"
+  },
+  {
+    "id": "glossary05-043",
+    "source": "囚われのヴァイス",
+    "scope": "speaker",
+    "exact": "사로잡힌 바이스"
+  },
+  {
+    "id": "glossary05-044",
+    "source": "ギラついた暴漢",
+    "scope": "speaker",
+    "exact": "눈을 번뜩이는 폭한"
+  },
+  {
+    "id": "glossary05-045",
+    "source": "へべれけのヴァイス",
+    "scope": "speaker",
+    "exact": "곤드레만드레 취한 바이스"
+  },
+  {
+    "id": "glossary05-046",
+    "source": "うんざり顔のヴァイス",
+    "scope": "speaker",
+    "exact": "질린 표정의 바이스"
+  },
+  {
+    "id": "glossary05-047",
+    "source": "不愛想な作業員",
+    "scope": "speaker",
+    "exact": "붙임성 없는 작업자"
+  },
+  {
+    "id": "glossary05-048",
+    "source": "勝気そうな少女",
+    "scope": "speaker",
+    "exact": "드세 보이는 소녀"
+  },
+  {
+    "id": "glossary05-049",
+    "source": "迷えるヴァイス",
+    "scope": "speaker",
+    "exact": "길을 잃은 바이스"
+  },
+  {
+    "id": "glossary05-050",
+    "source": "先遣隊のヴァイス",
+    "scope": "speaker",
+    "exact": "선발대 바이스"
+  },
+  {
+    "id": "glossary05-051",
+    "source": "会場の全員",
+    "scope": "speaker",
+    "exact": "행사장의 모두"
+  },
+  {
+    "id": "glossary05-052",
+    "source": "ゆるふわなヴァイス",
+    "scope": "speaker",
+    "exact": "느긋하고 부드러운 바이스"
+  },
+  {
+    "id": "glossary05-053",
+    "source": "いたずらっ子な生徒",
+    "scope": "speaker",
+    "exact": "장난꾸러기 학생"
+  },
+  {
+    "id": "glossary05-054",
+    "source": "強引な賊",
+    "scope": "speaker",
+    "exact": "막무가내인 도적"
+  },
+  {
+    "id": "glossary05-055",
+    "source": "出店の店主",
+    "scope": "speaker",
+    "exact": "노점 주인"
+  },
+  {
+    "id": "glossary05-056",
+    "source": "のんびり屋のヴァイス",
+    "scope": "speaker",
+    "exact": "느긋한 바이스"
+  },
+  {
+    "id": "glossary05-057",
+    "source": "皮肉屋のヴァイス",
+    "scope": "speaker",
+    "exact": "빈정거리는 바이스"
+  },
+  {
+    "id": "glossary05-058",
+    "source": "困り笑いのヴァイス",
+    "scope": "speaker",
+    "exact": "곤란한 듯 웃는 바이스"
+  },
+  {
+    "id": "glossary05-059",
+    "source": "怒れるヴァイス",
+    "scope": "speaker",
+    "exact": "분노한 바이스"
+  },
+  {
+    "id": "glossary05-060",
+    "source": "気にしいのヴァイス",
+    "scope": "speaker",
+    "exact": "걱정이 많은 바이스"
+  },
+  {
+    "id": "glossary05-061",
+    "source": "飄々とした店員",
+    "scope": "speaker",
+    "exact": "태연한 점원"
+  },
+  {
+    "id": "glossary05-062",
+    "source": "緊張しいなヴァイス",
+    "scope": "speaker",
+    "exact": "긴장을 잘하는 바이스"
+  },
+  {
+    "id": "glossary05-063",
+    "source": "オーディションの司会",
+    "scope": "speaker",
+    "exact": "오디션 사회자"
+  },
+  {
+    "id": "glossary05-064",
+    "source": "品のある商人",
+    "scope": "speaker",
+    "exact": "품위 있는 상인"
+  },
+  {
+    "id": "glossary05-065",
+    "source": "行きずりのヴァイス",
+    "scope": "speaker",
+    "exact": "우연히 만난 바이스"
+  },
+  {
+    "id": "glossary05-066",
+    "source": "笑い転げるヴァイス",
+    "scope": "speaker",
+    "exact": "뒹굴며 웃는 바이스"
+  },
+  {
+    "id": "glossary05-067",
+    "source": "フラーナ",
+    "scope": "speaker",
+    "exact": "프라나"
+  },
+  {
+    "id": "glossary05-068",
+    "source": "フラーナの力だ。",
+    "scope": "story-test",
+    "contains": "프라나"
+  },
+  {
+    "id": "glossary05-069",
+    "source": "エビルフレイム・クリスタル・フォース",
+    "scope": "speaker",
+    "exact": "이블 플레임 크리스탈 포스"
+  },
+  {
+    "id": "glossary05-070",
+    "source": "エビルフレイム・クリスタル・フォースの力だ。",
+    "scope": "story-test",
+    "contains": "이블 플레임 크리스탈 포스"
+  },
+  {
+    "id": "glossary05-071",
+    "source": "メシツカイ",
+    "scope": "story-test",
+    "contains": "하인"
+  },
+  {
+    "id": "glossary05-072",
+    "source": "カミモドキ",
+    "scope": "story-test",
+    "contains": "가짜 신"
+  },
+  {
+    "id": "glossary05-073",
+    "source": "陰のある商人",
+    "scope": "speaker",
+    "exact": "어두운 분위기의 상인"
+  },
+  {
+    "id": "glossary05-074",
+    "source": "強盗の少女",
+    "scope": "speaker",
+    "exact": "강도 소녀"
+  },
+  {
+    "id": "glossary05-075",
+    "source": "ダウナーなヴァイス",
+    "scope": "speaker",
+    "exact": "기운 없는 바이스"
+  },
+  {
+    "id": "glossary05-076",
+    "source": "見習いの少女",
+    "scope": "speaker",
+    "exact": "견습 소녀"
+  },
+  {
+    "id": "glossary05-077",
+    "source": "冷静沈着なヴァイス",
+    "scope": "speaker",
+    "exact": "냉정 침착한 바이스"
+  },
+  {
+    "id": "glossary05-078",
+    "source": "儚げな少女",
+    "scope": "speaker",
+    "exact": "가녀린 소녀"
+  },
+  {
+    "id": "glossary05-079",
+    "source": "見張りの魔術師",
+    "scope": "speaker",
+    "exact": "보초 마술사"
+  },
+  {
+    "id": "glossary05-080",
+    "source": "ドライなヴァイス",
+    "scope": "speaker",
+    "exact": "무심한 바이스"
+  },
+  {
+    "id": "glossary05-081",
+    "source": "倉庫番のヴァイス",
+    "scope": "speaker",
+    "exact": "창고지기 바이스"
+  },
+  {
+    "id": "glossary05-082",
+    "source": "能天気な団員",
+    "scope": "speaker",
+    "exact": "태평한 단원"
+  },
+  {
+    "id": "glossary05-083",
+    "source": "暗がりの男",
+    "scope": "speaker",
+    "exact": "어둠 속 남자"
+  },
+  {
+    "id": "glossary05-084",
+    "source": "店員のヴァイス",
+    "scope": "speaker",
+    "exact": "점원 바이스"
+  },
+  {
+    "id": "glossary05-085",
+    "source": "純朴な新入り",
+    "scope": "speaker",
+    "exact": "순박한 신입"
+  },
+  {
+    "id": "glossary05-086",
+    "source": "小心者のヴァイス",
+    "scope": "speaker",
+    "exact": "소심한 바이스"
+  },
+  {
+    "id": "glossary05-087",
+    "source": "魚面の店主",
+    "scope": "speaker",
+    "exact": "물고기 얼굴의 가게 주인"
+  },
+  {
+    "id": "glossary05-088",
+    "source": "村長のヴァイス",
+    "scope": "speaker",
+    "exact": "촌장 바이스"
+  },
+  {
+    "id": "glossary05-089",
+    "source": "強欲なヴァイス",
+    "scope": "speaker",
+    "exact": "탐욕스러운 바이스"
+  },
+  {
+    "id": "glossary05-090",
+    "source": "熱血なヴァイス",
+    "scope": "speaker",
+    "exact": "열혈 바이스"
+  },
+  {
+    "id": "glossary05-091",
+    "source": "使用人の魔術師",
+    "scope": "speaker",
+    "exact": "하인 마술사"
+  },
+  {
+    "id": "glossary05-092",
+    "source": "苛立ったヴァイス",
+    "scope": "speaker",
+    "exact": "짜증 난 바이스"
+  },
+  {
+    "id": "glossary05-093",
+    "source": "荒くれのヴァイス",
+    "scope": "speaker",
+    "exact": "난폭한 바이스"
+  },
+  {
+    "id": "glossary05-094",
+    "source": "従者のヴァイス",
+    "scope": "speaker",
+    "exact": "시종 바이스"
+  },
+  {
+    "id": "glossary05-095",
+    "source": "ネガティブな神官",
+    "scope": "speaker",
+    "exact": "부정적인 신관"
+  },
+  {
+    "id": "glossary05-096",
+    "source": "挙動不審な男",
+    "scope": "speaker",
+    "exact": "거동이 수상한 남자"
+  },
+  {
+    "id": "glossary05-097",
+    "source": "狩り帰りのヴァイス",
+    "scope": "speaker",
+    "exact": "사냥을 마치고 돌아온 바이스"
+  },
+  {
+    "id": "glossary05-098",
+    "source": "警備のヴァイス",
+    "scope": "speaker",
+    "exact": "경비 바이스"
+  },
+  {
+    "id": "glossary05-099",
+    "source": "熱血漢の用心棒",
+    "scope": "speaker",
+    "exact": "열혈 경호원"
+  },
+  {
+    "id": "glossary05-100",
+    "source": "治療師のヴァイス",
+    "scope": "speaker",
+    "exact": "치료사 바이스"
+  },
+  {
+    "id": "glossary05-101",
+    "source": "配達員のヴァイス",
+    "scope": "speaker",
+    "exact": "배달원 바이스"
+  },
+  {
+    "id": "glossary05-102",
+    "source": "古株の店長",
+    "scope": "speaker",
+    "exact": "고참 점장"
+  },
+  {
+    "id": "glossary05-103",
+    "source": "お調子者のヴァイス",
+    "scope": "speaker",
+    "exact": "까불대는 바이스"
+  },
+  {
+    "id": "glossary05-104",
+    "source": "警戒心の強い少年",
+    "scope": "speaker",
+    "exact": "경계심이 강한 소년"
+  },
+  {
+    "id": "glossary05-105",
+    "source": "奴隷の少女",
+    "scope": "speaker",
+    "exact": "노예 소녀"
+  },
+  {
+    "id": "glossary05-106",
+    "source": "入隊希望のヴァイス",
+    "scope": "speaker",
+    "exact": "입대를 희망하는 바이스"
+  },
+  {
+    "id": "glossary05-107",
+    "source": "魚面の怪人",
+    "scope": "speaker",
+    "exact": "물고기 얼굴의 괴인"
+  },
+  {
+    "id": "glossary05-108",
+    "source": "悪戯っぽいヴァイス",
+    "scope": "speaker",
+    "exact": "장난기 많은 바이스"
+  },
+  {
+    "id": "glossary05-109",
+    "source": "お調子者の隊員",
+    "scope": "speaker",
+    "exact": "까불대는 대원"
+  },
+  {
+    "id": "glossary05-110",
+    "source": "元気いっぱいのヴァイス",
+    "scope": "speaker",
+    "exact": "활기 넘치는 바이스"
+  },
+  {
+    "id": "glossary05-111",
+    "source": "楽天家なヴァイス",
+    "scope": "speaker",
+    "exact": "낙천적인 바이스"
+  },
+  {
+    "id": "glossary05-112",
+    "source": "元気なヴァイス",
+    "scope": "speaker",
+    "exact": "활기찬 바이스"
+  },
+  {
+    "id": "glossary05-113",
+    "source": "喧嘩自慢のヴァイス",
+    "scope": "speaker",
+    "exact": "싸움에 자신 있는 바이스"
+  },
+  {
+    "id": "glossary05-114",
+    "source": "苦労性な少女隊員",
+    "scope": "speaker",
+    "exact": "걱정 많은 소녀대원"
+  },
+  {
+    "id": "glossary05-115",
+    "source": "いやらしい目の店主",
+    "scope": "speaker",
+    "exact": "음흉한 눈빛의 가게 주인"
+  },
+  {
+    "id": "glossary05-116",
+    "source": "用心棒のヴァイス",
+    "scope": "speaker",
+    "exact": "경호원 바이스"
+  },
+  {
+    "id": "glossary05-117",
+    "source": "黒いスライムの少女",
+    "scope": "speaker",
+    "exact": "검은 슬라임 소녀"
+  },
+  {
+    "id": "glossary05-118",
+    "source": "入隊希望のヴァイスA",
+    "scope": "speaker",
+    "exact": "입대를 희망하는 바이스 A"
+  },
+  {
+    "id": "glossary05-119",
+    "source": "入隊希望のヴァイスB",
+    "scope": "speaker",
+    "exact": "입대를 희망하는 바이스 B"
+  },
+  {
+    "id": "glossary05-120",
+    "source": "痩せぎすの黄衣の男",
+    "scope": "speaker",
+    "exact": "깡마른 황의의 남자"
+  },
+  {
+    "id": "glossary05-121",
+    "source": "気位の高いヴァイス",
+    "scope": "speaker",
+    "exact": "자존심 강한 바이스"
+  },
+  {
+    "id": "glossary05-122",
+    "source": "大食いのヴァイス",
+    "scope": "speaker",
+    "exact": "먹보 바이스"
+  },
+  {
+    "id": "glossary05-123",
+    "source": "伏し目がちのヴァイス",
+    "scope": "speaker",
+    "exact": "눈을 내리깐 바이스"
+  },
+  {
+    "id": "glossary05-124",
+    "source": "通りすがりのヴァイス",
+    "scope": "speaker",
+    "exact": "지나가던 바이스"
+  },
+  {
+    "id": "glossary05-125",
+    "source": "荒くれヴァイス",
+    "scope": "speaker",
+    "exact": "난폭한 바이스"
+  },
+  {
+    "id": "glossary05-126",
+    "source": "乱れた髪の女性",
+    "scope": "speaker",
+    "exact": "머리가 헝클어진 여성"
+  },
+  {
+    "id": "glossary05-127",
+    "source": "村民のヴァイス",
+    "scope": "speaker",
+    "exact": "마을 주민 바이스"
+  },
+  {
+    "id": "glossary05-128",
+    "source": "無表情の守衛",
+    "scope": "speaker",
+    "exact": "무표정한 경비병"
+  },
+  {
+    "id": "glossary05-129",
+    "source": "入隊希望のヴァイスC",
+    "scope": "speaker",
+    "exact": "입대를 희망하는 바이스 C"
+  },
+  {
+    "id": "glossary05-130",
+    "source": "入隊希望のヴァイスD",
+    "scope": "speaker",
+    "exact": "입대를 희망하는 바이스 D"
+  },
+  {
+    "id": "glossary05-131",
+    "source": "明るい黄衣乙女",
+    "scope": "speaker",
+    "exact": "명랑한 황의소녀"
+  },
+  {
+    "id": "glossary05-132",
+    "source": "ダウナーな黄衣乙女",
+    "scope": "speaker",
+    "exact": "기운 없는 황의소녀"
+  },
+  {
+    "id": "glossary05-133",
+    "source": "はらぺこのヴァイス",
+    "scope": "speaker",
+    "exact": "배고픈 바이스"
+  },
+  {
+    "id": "glossary05-134",
+    "source": "無表情のヴァイス",
+    "scope": "speaker",
+    "exact": "무표정한 바이스"
+  },
+  {
+    "id": "glossary05-135",
+    "source": "困惑する客",
+    "scope": "speaker",
+    "exact": "당황한 손님"
+  },
+  {
+    "id": "glossary05-136",
+    "source": "増援の少女隊員",
+    "scope": "speaker",
+    "exact": "지원 온 소녀대원"
+  },
+  {
+    "id": "glossary05-137",
+    "source": "楽天家のヴァイス",
+    "scope": "speaker",
+    "exact": "낙천적인 바이스"
+  },
+  {
+    "id": "glossary05-138",
+    "source": "泣き虫な生徒",
+    "scope": "speaker",
+    "exact": "울보 학생"
+  },
+  {
+    "id": "glossary05-139",
+    "source": "目ざといヴァイス",
+    "scope": "speaker",
+    "exact": "눈썰미 좋은 바이스"
+  },
+  {
+    "id": "glossary05-140",
+    "source": "不審なフードの男",
+    "scope": "speaker",
+    "exact": "수상한 후드 남자"
+  },
+  {
+    "id": "glossary05-141",
+    "source": "勢いのあるヴァイス",
+    "scope": "speaker",
+    "exact": "기세등등한 바이스"
+  },
+  {
+    "id": "glossary05-142",
+    "source": "訝しげな通行人",
+    "scope": "speaker",
+    "exact": "의아해하는 행인"
+  },
+  {
+    "id": "glossary05-143",
+    "source": "そそっかしいヴァイス",
+    "scope": "speaker",
+    "exact": "덜렁대는 바이스"
+  },
+  {
+    "id": "glossary05-144",
+    "source": "仲間のヴァイスたち",
+    "scope": "speaker",
+    "exact": "동료 바이스들"
+  },
+  {
+    "id": "glossary05-145",
+    "source": "通りすがりの魔術師",
+    "scope": "speaker",
+    "exact": "지나가던 마술사"
+  },
+  {
+    "id": "glossary05-146",
+    "source": "怯える声",
+    "scope": "speaker",
+    "exact": "겁에 질린 목소리"
+  },
+  {
+    "id": "glossary05-147",
+    "source": "血気盛んなヴァイス",
+    "scope": "speaker",
+    "exact": "혈기 왕성한 바이스"
+  },
+  {
+    "id": "glossary05-148",
+    "source": "魚面の怪人たち",
+    "scope": "speaker",
+    "exact": "물고기 얼굴의 괴인들"
+  },
+  {
+    "id": "glossary05-149",
+    "source": "深きもの",
+    "scope": "ui",
+    "exact": "심해인"
+  },
+  {
+    "id": "glossary05-150",
+    "source": "ケーショーシャ",
+    "scope": "story-test",
+    "contains": "계승자"
+  },
+  {
+    "id": "glossary05-151",
+    "source": "コーコガク",
+    "scope": "story-test",
+    "contains": "고고학"
+  },
+  {
+    "id": "glossary05-152",
+    "source": "ダイガク",
+    "scope": "story-test",
+    "contains": "대학"
+  },
+  {
+    "id": "glossary05-153",
+    "source": "デービー・ジョーンズ・ロッカー",
+    "scope": "speaker",
+    "exact": "데이비 존스 로커"
+  },
+  {
+    "id": "glossary05-154",
+    "source": "デービー・ジョーンズ・ロッカーの力だ。",
+    "scope": "story-test",
+    "contains": "데이비 존스 로커"
+  },
+  {
+    "id": "glossary05-155",
+    "source": "不思議の国のアリスを読む。",
+    "scope": "story-test",
+    "contains": "앨리스"
+  },
+  {
+    "id": "glossary05-156",
+    "source": "鏡の国のアリスを読む。",
+    "scope": "story-test",
+    "contains": "앨리스"
+  },
+  {
+    "id": "glossary05-157",
+    "source": "意味の深きものを選ぶ。",
+    "scope": "story-test",
+    "contains": "깊은 것"
+  },
+  {
+    "id": "glossary05-158",
+    "source": "テンションが上がった。",
+    "scope": "story-test",
+    "contains": "텐션"
+  },
+  {
+    "id": "glossary05-159",
+    "source": "テンシンを訪れる。",
+    "scope": "story-test",
+    "contains": "텐신"
+  },
+  {
+    "id": "glossary05-160",
+    "source": "カミソリを使う。",
+    "scope": "story-test",
+    "contains": "면도기"
+  },
+  {
+    "id": "glossary05-161",
+    "source": "ムードの良い部屋。",
+    "scope": "story-test",
+    "contains": "무드"
+  },
+  {
+    "id": "glossary05-162",
+    "source": "ムーミンの話をする。",
+    "scope": "story-test",
+    "contains": "무민"
+  },
+  {
+    "id": "glossary05-163",
+    "source": "スーッと息を吸った。",
+    "scope": "story-test",
+    "contains": "스윽"
+  },
+  {
+    "id": "glossary05-164",
+    "source": "スープを飲む。",
+    "scope": "story-test",
+    "contains": "스프"
+  },
+  {
+    "id": "glossary05-165",
+    "source": "シトラスの香りがする。",
+    "scope": "story-test",
+    "contains": "시트러스"
+  },
+  {
+    "id": "glossary05-166",
+    "source": "モネちゃんは元気です。",
+    "scope": "story-test",
+    "contains": "모네짱"
+  },
+  {
+    "id": "glossary05-167",
+    "source": "グランプリで優勝した。",
+    "scope": "story-test",
+    "contains": "그랑프리"
+  },
+  {
+    "id": "glossary05-168",
+    "source": "イスに座る。",
+    "scope": "story-test",
+    "contains": "의자"
+  },
+  {
+    "id": "glossary05-169",
+    "source": "フラーナ＝フリーニの友達だ。",
+    "scope": "story-test",
+    "contains": "프라나=프리니"
+  },
+  {
+    "id": "glossary05-170",
+    "source": "バーミリオンの作戦だ。",
+    "scope": "story-test",
+    "contains": "버밀리온의"
+  },
+  {
+    "id": "glossary05-171",
+    "source": "大学院で考古学を学ぶ。",
+    "scope": "story-test",
+    "contains": "대학원"
+  },
+  {
+    "id": "glossary05-172",
+    "source": "夢のクリスタライザー",
+    "scope": "story-test",
+    "contains": "꿈의 결정화 장치"
+  },
+  {
+    "id": "glossary05-173",
+    "source": "<size=32>夢見の館</size><interval=0.4>へ行こう。",
+    "scope": "story-test",
+    "plainContains": "꿈의 저택"
+  },
+  {
+    "id": "glossary05-174",
+    "source": "<speed=2>テンシ</speed>が来た。",
+    "scope": "story-test",
+    "plainContains": "천사"
+  },
+  {
+    "id": "glossary05-175",
+    "source": "<ruby=ゆめみびと>夢見人</ruby>の力だ。",
+    "scope": "story-test",
+    "plainContains": "꿈꾸는 자"
+  },
+  {
+    "id": "glossary05-176",
+    "source": "<size=32>メシツカイ</size>なのだ！",
+    "scope": "story-test",
+    "plainContains": "하인"
+  },
+  {
+    "id": "glossary05-177",
+    "source": "夢の<color=yellow>クリスタライザー</color>だ。",
+    "scope": "story-test",
+    "plainContains": "결정화 장치"
+  }
+]

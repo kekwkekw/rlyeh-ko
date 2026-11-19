@@ -12,6 +12,15 @@ catalog = importlib.util.module_from_spec(spec); spec.loader.exec_module(catalog
 
 
 class TextCatalogChecks(unittest.TestCase):
+    def test_shipped_master_display_pairs_share_one_reviewed_wording(self):
+        rows = catalog.read(Path(__file__).resolve().parents[1]/'data/exports/text-catalog.json', {})['entries']
+        targets = {}
+        masters = [r for r in rows if r['scope'].startswith('master:')]
+        self.assertTrue(masters)
+        for row in masters:
+            previous = targets.setdefault(row['source'], row['target'])
+            self.assertEqual(previous, row['target'], row['scope'])
+
     def entry(self, source='攻撃力+[0,0,0]%', target='공격력 +[0,0,0]%'):
         return dict(id='test', source=source, target=target, scope='ui', kind='exact',
                     sourceHash=catalog.hash_text(source), reviewer='test', evidence=[dict(id='source', sourceHash=catalog.hash_text(source))])

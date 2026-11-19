@@ -1,0 +1,818 @@
+[
+  {
+    "id": "7ad3a75a7327aa428b62",
+    "source": "メルファ",
+    "scope": "speaker",
+    "exact": "멜파"
+  },
+  {
+    "id": "3552c13c23d0c0f13c04",
+    "source": "ビーネリンデ",
+    "scope": "speaker",
+    "exact": "비네린데"
+  },
+  {
+    "id": "b8a1bf654853e37b81d9",
+    "source": "メルティエル",
+    "scope": "speaker",
+    "exact": "멜티엘"
+  },
+  {
+    "id": "4aa14d641a30bf5e1b5a",
+    "source": "スコービー・ヴァオ",
+    "scope": "speaker",
+    "exact": "스코비 바오"
+  },
+  {
+    "id": "9886c22b5ba09122d19b",
+    "source": "ヴァリナ",
+    "scope": "speaker",
+    "exact": "바리나"
+  },
+  {
+    "id": "5f95a8b2b36837284945",
+    "source": "アール",
+    "scope": "speaker",
+    "exact": "아르"
+  },
+  {
+    "id": "c5fb920112ee56aa2b15",
+    "source": "アクィロ",
+    "scope": "speaker",
+    "exact": "아퀴로"
+  },
+  {
+    "id": "646a147c2fe83e4f672a",
+    "source": "ルセ＝ルルカ",
+    "scope": "speaker",
+    "exact": "루세=루루카"
+  },
+  {
+    "id": "24cfd9ab5bb29d106d7d",
+    "source": "ルゥ＝ルルサ",
+    "scope": "speaker",
+    "exact": "루=루루사"
+  },
+  {
+    "id": "b8f060653a28a3654497",
+    "source": "ムルミィ",
+    "scope": "speaker",
+    "exact": "무르미"
+  },
+  {
+    "id": "9ec3ec408b02dd61f4db",
+    "source": "ノーティア",
+    "scope": "speaker",
+    "exact": "노티아"
+  },
+  {
+    "id": "b877043a2bda08167c86",
+    "source": "ユラナ",
+    "scope": "speaker",
+    "exact": "유라나"
+  },
+  {
+    "id": "e12cd72d0ecfb7d6dfa1",
+    "source": "ルルカ",
+    "scope": "speaker",
+    "exact": "루루카"
+  },
+  {
+    "id": "2488b0eea988117b82be",
+    "source": "ルルサ",
+    "scope": "speaker",
+    "exact": "루루사"
+  },
+  {
+    "id": "4587f081d3f7b7f9c8da",
+    "source": "エカ",
+    "scope": "speaker",
+    "exact": "에카"
+  },
+  {
+    "id": "32203d0ac02bd3d0f1f6",
+    "source": "イヴ",
+    "scope": "speaker",
+    "exact": "이브"
+  },
+  {
+    "id": "f58fa7c3cb52362352e9",
+    "source": "リンデ",
+    "scope": "speaker",
+    "exact": "린데"
+  },
+  {
+    "id": "de98311ee5a9d28576f2",
+    "source": "ネーフェ",
+    "scope": "speaker",
+    "exact": "네페"
+  },
+  {
+    "id": "4f8ffbc136a5268699da",
+    "source": "ジアー",
+    "scope": "speaker",
+    "exact": "지아"
+  },
+  {
+    "id": "938c39d5285f987a1244",
+    "source": "グラン",
+    "scope": "speaker",
+    "exact": "그란"
+  },
+  {
+    "id": "57fe7fee0db7e4e707ca",
+    "source": "ルーチェ",
+    "scope": "speaker",
+    "exact": "루체"
+  },
+  {
+    "id": "177153f9f8c1416954b2",
+    "source": "エヴァラス",
+    "scope": "speaker",
+    "exact": "에바라스"
+  },
+  {
+    "id": "6f3fb44b00a8f874a9c7",
+    "source": "エバ",
+    "scope": "speaker",
+    "exact": "에바"
+  },
+  {
+    "id": "da32249a1cf83b6d4d48",
+    "source": "マリア",
+    "scope": "speaker",
+    "exact": "마리아"
+  },
+  {
+    "id": "27970943f96c6df4e867",
+    "source": "ネア",
+    "scope": "speaker",
+    "exact": "네아"
+  },
+  {
+    "id": "3b1a16b64994d6dc6838",
+    "source": "スコービー",
+    "scope": "speaker",
+    "exact": "스코비"
+  },
+  {
+    "id": "ea946a9b86842d2d336e",
+    "source": "シト",
+    "scope": "speaker",
+    "exact": "시토"
+  },
+  {
+    "id": "01cfb08b8f681b545cac",
+    "source": "ラファエル",
+    "scope": "speaker",
+    "exact": "라파엘"
+  },
+  {
+    "id": "eb2d2b5b8b4f73aade1f",
+    "source": "ミカエル",
+    "scope": "speaker",
+    "exact": "미카엘"
+  },
+  {
+    "id": "e389c74480d6516a52c2",
+    "source": "ラグエル",
+    "scope": "speaker",
+    "exact": "라구엘"
+  },
+  {
+    "id": "97ad2f3cd0eff79a25d5",
+    "source": "カマエル",
+    "scope": "speaker",
+    "exact": "카마엘"
+  },
+  {
+    "id": "ebafbd387d98548ea858",
+    "source": "アラタ",
+    "scope": "speaker",
+    "exact": "아라타"
+  },
+  {
+    "id": "ba4872233b4bff5edca7",
+    "source": "カズラギアラタ",
+    "scope": "speaker",
+    "exact": "카즈라기 아라타"
+  },
+  {
+    "id": "c51ebe0b29994b4dccdf",
+    "source": "オリヴィア",
+    "scope": "speaker",
+    "exact": "올리비아"
+  },
+  {
+    "id": "dd632caac77611233a7f",
+    "source": "ハイパーボリア",
+    "scope": "speaker",
+    "exact": "하이퍼보리아"
+  },
+  {
+    "id": "f39c368fdf12495dbde0",
+    "source": "ウルタール",
+    "scope": "speaker",
+    "exact": "울타르"
+  },
+  {
+    "id": "57f8d6ab829e3933d5a4",
+    "source": "幻夢境",
+    "scope": "speaker",
+    "exact": "환몽경"
+  },
+  {
+    "id": "fde85e3a2ff660ed6421",
+    "source": "ドリームランド",
+    "scope": "speaker",
+    "exact": "드림랜드"
+  },
+  {
+    "id": "b274d3d94020a82c0703",
+    "source": "鉄の墓場",
+    "scope": "speaker",
+    "exact": "철의 묘지"
+  },
+  {
+    "id": "edfd076a33e51a192ddc",
+    "source": "嘆きの谷",
+    "scope": "speaker",
+    "exact": "탄식의 골짜기"
+  },
+  {
+    "id": "a530d5643b0de74115e6",
+    "source": "マギス・ワン",
+    "scope": "speaker",
+    "exact": "마기스 원"
+  },
+  {
+    "id": "739f354fb3b05022cb2a",
+    "source": "ルルサルカ",
+    "scope": "speaker",
+    "exact": "루루사루카"
+  },
+  {
+    "id": "6207a77e7278b60b51c1",
+    "source": "ティンダロス",
+    "scope": "speaker",
+    "exact": "틴달로스"
+  },
+  {
+    "id": "44c0e091aadf4baa8083",
+    "source": "継承者",
+    "scope": "glossary-check",
+    "exact": "계승자"
+  },
+  {
+    "id": "18a9346a17c3adbecada",
+    "source": "銀の鍵",
+    "scope": "glossary-check",
+    "exact": "은의 열쇠"
+  },
+  {
+    "id": "ae20d167d0d7083f419e",
+    "source": "鍵の候補者",
+    "scope": "glossary-check",
+    "exact": "열쇠의 후보자"
+  },
+  {
+    "id": "d6776a519e872416a698",
+    "source": "少女隊",
+    "scope": "glossary-check",
+    "exact": "소녀대"
+  },
+  {
+    "id": "5d2610bb8c4ba1191c05",
+    "source": "少女隊員",
+    "scope": "glossary-check",
+    "exact": "소녀대원"
+  },
+  {
+    "id": "edfeb497e3d2bcb96550",
+    "source": "ハカセ",
+    "scope": "glossary-check",
+    "exact": "박사"
+  },
+  {
+    "id": "b984e9cefefd6321a3e0",
+    "source": "風凪ぎ",
+    "scope": "glossary-check",
+    "exact": "무풍기"
+  },
+  {
+    "id": "6a7fbc2270c19611437e",
+    "source": "冥宵祭",
+    "scope": "glossary-check",
+    "exact": "명소제"
+  },
+  {
+    "id": "2c08d56de675148f3b89",
+    "source": "雲神",
+    "scope": "glossary-check",
+    "exact": "구름신"
+  },
+  {
+    "id": "7bc919c54f1ceb9cc3a7",
+    "source": "ゾス三神",
+    "scope": "glossary-check",
+    "exact": "조스 삼신"
+  },
+  {
+    "id": "1d2c150b23e397610127",
+    "source": "雷霆",
+    "scope": "glossary-check",
+    "exact": "뇌정"
+  },
+  {
+    "id": "0cb237a10eb1d4ca3c1a",
+    "source": "ケラウノス",
+    "scope": "glossary-check",
+    "exact": "케라우노스"
+  },
+  {
+    "id": "e60a1aa8cd6ba535eb98",
+    "source": "スー",
+    "scope": "speaker",
+    "exact": "수"
+  },
+  {
+    "id": "eb179d66602b820b0818",
+    "source": "Gen.C.バーミリオン",
+    "scope": "speaker",
+    "exact": "Gen. C. 버밀리온"
+  },
+  {
+    "id": "0c1421b92f18fc50a0ee",
+    "source": "語り部",
+    "scope": "speaker",
+    "exact": "이야기꾼"
+  },
+  {
+    "id": "90901b51dd3878110c5d",
+    "source": "青い瞳の少女",
+    "scope": "speaker",
+    "exact": "푸른 눈의 소녀"
+  },
+  {
+    "id": "0641b3479de46e495bef",
+    "source": "繭に閉じこもる少女",
+    "scope": "speaker",
+    "exact": "고치 속에 틀어박힌 소녀"
+  },
+  {
+    "id": "df5b657f8e4f30043ed4",
+    "source": "高慢そうな少女",
+    "scope": "speaker",
+    "exact": "거만해 보이는 소녀"
+  },
+  {
+    "id": "8336f1b7e009142b6817",
+    "source": "副総長",
+    "scope": "speaker",
+    "exact": "부총장"
+  },
+  {
+    "id": "4e250708fc1cf901197f",
+    "source": "ローブ姿の売人",
+    "scope": "speaker",
+    "exact": "로브를 입은 밀매상"
+  },
+  {
+    "id": "c94ce8d74e369327e57c",
+    "source": "荒っぽい受付",
+    "scope": "speaker",
+    "exact": "거친 접수원"
+  },
+  {
+    "id": "a012fb646560ef13337c",
+    "source": "真面目そうな少女",
+    "scope": "speaker",
+    "exact": "성실해 보이는 소녀"
+  },
+  {
+    "id": "96b2afcd7719ed9f71e2",
+    "source": "物憂げなヴァイス",
+    "scope": "speaker",
+    "exact": "우수에 잠긴 바이스"
+  },
+  {
+    "id": "8d99f6eff4f8e929518c",
+    "source": "取り巻きのヴァイス",
+    "scope": "speaker",
+    "exact": "추종자 바이스"
+  },
+  {
+    "id": "033fd9ad96cac8120be8",
+    "source": "純朴な少女",
+    "scope": "speaker",
+    "exact": "순박한 소녀"
+  },
+  {
+    "id": "5adc6369595698affe78",
+    "source": "小柄な男",
+    "scope": "speaker",
+    "exact": "체구가 작은 남자"
+  },
+  {
+    "id": "4e244188a4f78ea04ede",
+    "source": "健気な少女",
+    "scope": "speaker",
+    "exact": "꿋꿋한 소녀"
+  },
+  {
+    "id": "053751879b58e79c1ea3",
+    "source": "見習い魔術師",
+    "scope": "speaker",
+    "exact": "견습 마술사"
+  },
+  {
+    "id": "387921f805be3e69713d",
+    "source": "物静かな人形",
+    "scope": "speaker",
+    "exact": "조용한 인형"
+  },
+  {
+    "id": "43572c158f3f990bc74d",
+    "source": "ジャンク屋のヴァイス",
+    "scope": "speaker",
+    "exact": "고물상 바이스"
+  },
+  {
+    "id": "d64ea950dd6b566da783",
+    "source": "マギス・ワン隊長",
+    "scope": "speaker",
+    "exact": "마기스 원 대장"
+  },
+  {
+    "id": "64b6ff87e0afeb7f0453",
+    "source": "おとなしいヴァイス",
+    "scope": "speaker",
+    "exact": "얌전한 바이스"
+  },
+  {
+    "id": "2e0744d1b48f3dc60d6d",
+    "source": "足癖の悪い泥棒",
+    "scope": "speaker",
+    "exact": "발버릇이 나쁜 도둑"
+  },
+  {
+    "id": "fd68e49519d705be9a63",
+    "source": "業者のヴァイス",
+    "scope": "speaker",
+    "exact": "업자 바이스"
+  },
+  {
+    "id": "d5aae4d49114f4c2ef44",
+    "source": "富豪の男",
+    "scope": "speaker",
+    "exact": "부유한 남자"
+  },
+  {
+    "id": "9816be2009c8dde83c04",
+    "source": "少女のヴァイス",
+    "scope": "speaker",
+    "exact": "소녀 바이스"
+  },
+  {
+    "id": "43239094395ead6d0cb8",
+    "source": "キザな少女隊員",
+    "scope": "speaker",
+    "exact": "멋을 부리는 소녀대원"
+  },
+  {
+    "id": "6c842292d135d1d7255e",
+    "source": "穴倉のヴァイス",
+    "scope": "speaker",
+    "exact": "굴속의 바이스"
+  },
+  {
+    "id": "5ab0dd6f6301dfe6afcc",
+    "source": "美しい宝石の少女",
+    "scope": "speaker",
+    "exact": "아름다운 보석 소녀"
+  },
+  {
+    "id": "7fdd5e15c5671f04271d",
+    "source": "浮ついた少女隊員",
+    "scope": "speaker",
+    "exact": "들뜬 소녀대원"
+  },
+  {
+    "id": "25aad59d413cede92193",
+    "source": "粗暴な店主",
+    "scope": "speaker",
+    "exact": "난폭한 가게 주인"
+  },
+  {
+    "id": "0b03cc394ef047decc0e",
+    "source": "暴漢",
+    "scope": "speaker",
+    "exact": "폭한"
+  },
+  {
+    "id": "063ad411914ab003fee0",
+    "source": "着飾ったヴァイス",
+    "scope": "speaker",
+    "exact": "치장한 바이스"
+  },
+  {
+    "id": "595030a4cc1a8f78a2d0",
+    "source": "困り顔のヴァイス",
+    "scope": "speaker",
+    "exact": "곤란한 표정의 바이스"
+  },
+  {
+    "id": "6e3fd1578b979d7d4cdb",
+    "source": "金庫じじい",
+    "scope": "speaker",
+    "exact": "금고 영감"
+  },
+  {
+    "id": "7f5b717fea6f6ebc12da",
+    "source": "男勝りなヴァイス",
+    "scope": "speaker",
+    "exact": "여장부 바이스"
+  },
+  {
+    "id": "adf0df89c4ef0f70bdf6",
+    "source": "男勝りな生徒",
+    "scope": "speaker",
+    "exact": "씩씩한 학생"
+  },
+  {
+    "id": "c33118dd5056aaf55dda",
+    "source": "少女の母親",
+    "scope": "speaker",
+    "exact": "소녀의 어머니"
+  },
+  {
+    "id": "fb96b0cd7e042ee53cbc",
+    "source": "老獪な使い魔",
+    "scope": "speaker",
+    "exact": "노회한 사역마"
+  },
+  {
+    "id": "8aa6572d00edbd13114a",
+    "source": "アーカムのヴァイス",
+    "scope": "speaker",
+    "exact": "아캄의 바이스"
+  },
+  {
+    "id": "52027f75fd146fc04bdd",
+    "source": "派手なヴァイス",
+    "scope": "speaker",
+    "exact": "화려한 바이스"
+  },
+  {
+    "id": "bc489ab5c04b9df901fa",
+    "source": "マイペースなヴァイス",
+    "scope": "speaker",
+    "exact": "느긋한 바이스"
+  },
+  {
+    "id": "8dfe715952b6924f8fe1",
+    "source": "淑やかな作業員",
+    "scope": "speaker",
+    "exact": "차분한 작업자"
+  },
+  {
+    "id": "17c21ed650d1849efe32",
+    "source": "目つきの悪い少年",
+    "scope": "speaker",
+    "exact": "눈매가 사나운 소년"
+  },
+  {
+    "id": "afb43e063410f96176fc",
+    "source": "泥まみれのヴァイス",
+    "scope": "speaker",
+    "exact": "진흙투성이 바이스"
+  },
+  {
+    "id": "25eb2b9b556b65b53871",
+    "source": "粗暴なヴァイス",
+    "scope": "speaker",
+    "exact": "난폭한 바이스"
+  },
+  {
+    "id": "620c33be36f42b5a9682",
+    "source": "一生懸命なヴァイス",
+    "scope": "speaker",
+    "exact": "열심인 바이스"
+  },
+  {
+    "id": "2762528de116ecfb9809",
+    "source": "一本気なヴァイス",
+    "scope": "speaker",
+    "exact": "우직한 바이스"
+  },
+  {
+    "id": "ff0e6e22d70ecbd79bde",
+    "source": "勝ち気なヴァイス",
+    "scope": "speaker",
+    "exact": "지기 싫어하는 바이스"
+  },
+  {
+    "id": "910fe9cbea15f14c95ae",
+    "source": "開発局のヴァイス",
+    "scope": "speaker",
+    "exact": "개발국의 바이스"
+  },
+  {
+    "id": "7392094fbafbcc962cd5",
+    "source": "不審な男",
+    "scope": "speaker",
+    "exact": "수상한 남자"
+  },
+  {
+    "id": "f2396ac3c8719a945574",
+    "source": "涼やかなヴァイス",
+    "scope": "speaker",
+    "exact": "차분한 바이스"
+  },
+  {
+    "id": "1f91819c413bd5bca49c",
+    "source": "妖艶なヴァイス",
+    "scope": "speaker",
+    "exact": "요염한 바이스"
+  },
+  {
+    "id": "eaeaff8340b3771262f6",
+    "source": "長身の魔術師",
+    "scope": "speaker",
+    "exact": "키가 큰 마술사"
+  },
+  {
+    "id": "6bf3c88b82534c4546c9",
+    "source": "ネオンファンクラブ",
+    "scope": "speaker",
+    "exact": "네온 팬클럽"
+  },
+  {
+    "id": "bf12946e4f05f720de0e",
+    "source": "冷徹なエージェント",
+    "scope": "speaker",
+    "exact": "냉철한 요원"
+  },
+  {
+    "id": "08e4746b48b7b15a8161",
+    "source": "世話役のヴァイス",
+    "scope": "speaker",
+    "exact": "돌보미 바이스"
+  },
+  {
+    "id": "bd61db36ad024ec146d2",
+    "source": "粗野な店員",
+    "scope": "speaker",
+    "exact": "거친 점원"
+  },
+  {
+    "id": "84dac40bec3a97a77aae",
+    "source": "不可思議な技師",
+    "scope": "speaker",
+    "exact": "기묘한 기술자"
+  },
+  {
+    "id": "4441cedb66af69b07a9d",
+    "source": "刑務官のヴァイス",
+    "scope": "speaker",
+    "exact": "교도관 바이스"
+  },
+  {
+    "id": "ab6b0468800fbc1c4d69",
+    "source": "みすぼらしいヴァイス",
+    "scope": "speaker",
+    "exact": "초라한 바이스"
+  },
+  {
+    "id": "23b0fa6d490d22d5473d",
+    "source": "白いローブのシト",
+    "scope": "speaker",
+    "exact": "하얀 로브를 입은 시토"
+  },
+  {
+    "id": "d7d70d5425fce9fadd5d",
+    "source": "鹿角の少女",
+    "scope": "speaker",
+    "exact": "사슴뿔 소녀"
+  },
+  {
+    "id": "engine-116",
+    "source": "メルファ",
+    "scope": "glossary-check",
+    "contains": "멜파"
+  },
+  {
+    "id": "engine-117",
+    "source": "エカ",
+    "scope": "glossary-check",
+    "contains": "에카"
+  },
+  {
+    "id": "engine-118",
+    "source": "ネーフェ",
+    "scope": "glossary-check",
+    "contains": "네페"
+  },
+  {
+    "id": "engine-119",
+    "source": "ジアー",
+    "scope": "glossary-check",
+    "contains": "지아"
+  },
+  {
+    "id": "engine-120",
+    "source": "スコービー",
+    "scope": "glossary-check",
+    "contains": "스코비"
+  },
+  {
+    "id": "engine-121",
+    "source": "幻夢境",
+    "scope": "glossary-check",
+    "contains": "환몽경"
+  },
+  {
+    "id": "engine-122",
+    "source": "ハイパーボリア",
+    "scope": "glossary-check",
+    "contains": "하이퍼보리아"
+  },
+  {
+    "id": "engine-123",
+    "source": "ルセ＝ルルカ",
+    "scope": "glossary-check",
+    "contains": "루세=루루카"
+  },
+  {
+    "id": "engine-124",
+    "source": "ルゥ＝ルルサ",
+    "scope": "glossary-check",
+    "contains": "루=루루사"
+  },
+  {
+    "id": "engine-125",
+    "source": "銀の鍵",
+    "scope": "glossary-check",
+    "contains": "은의 열쇠"
+  },
+  {
+    "id": "engine-126",
+    "source": "ゾス三神",
+    "scope": "glossary-check",
+    "contains": "조스 삼신"
+  },
+  {
+    "id": "guard-127",
+    "source": "シトめ……！",
+    "scope": "glossary-check",
+    "contains": "시토 녀석"
+  },
+  {
+    "id": "guard-128",
+    "source": "グランプリで優勝した。",
+    "scope": "glossary-check",
+    "contains": "그랑프리"
+  },
+  {
+    "id": "guard-129",
+    "source": "ネアンデルタール人を知っている。",
+    "scope": "glossary-check",
+    "contains": "네안데르탈인"
+  },
+  {
+    "id": "guard-130",
+    "source": "シトラスの香りがする。",
+    "scope": "glossary-check",
+    "contains": "시트러스"
+  },
+  {
+    "id": "guard-131",
+    "source": "モネちゃんは元気です。",
+    "scope": "glossary-check",
+    "contains": "모네짱"
+  },
+  {
+    "id": "guard-132",
+    "source": "スーッと息を吸った。",
+    "scope": "glossary-check",
+    "contains": "스윽"
+  },
+  {
+    "id": "guard-133",
+    "source": "スープを飲む。",
+    "scope": "glossary-check",
+    "contains": "스프"
+  },
+  {
+    "id": "guard-134",
+    "source": "カミソリを使う。",
+    "scope": "glossary-check",
+    "contains": "면도기"
+  },
+  {
+    "id": "tagged-world",
+    "source": "<size=32>幻夢境</size><interval=0.8>でエカを探す。",
+    "scope": "glossary-check",
+    "contains": "환몽경"
+  }
+]

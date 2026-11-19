@@ -32,7 +32,7 @@ function Hash([string]$Path) {
     return $null
 }
 function Allowed([string]$Path) {
-    return $Path -match '^(BepInEx/core/[^/]+|dotnet/[^/]+|BepInEx/plugins/Rlyeh\.Localizer/(Rlyeh\.Localizer(\.Core)?\.dll|glossary/[^/]+|fonts/[^/]+|native/hdTransEngine\.dll|native/hdtrans-data/dicts\.hdsnap)|winhttp\.dll|doorstop_config\.ini|\.doorstop_version)$'
+    return $Path -match '^(BepInEx/core/[^/]+|dotnet/[^/]+|BepInEx/plugins/Rlyeh\.Localizer/(Rlyeh\.Localizer(\.Core)?\.dll|glossary/[^/]+|fonts/[^/]+|native/hdTransEngine\.dll|native/hdtrans-data/dicts\.hdsnap|images/catalog\.json|images/files/[a-f0-9]{64}\.png|scenario/reviewed\.json)|winhttp\.dll|doorstop_config\.ini|\.doorstop_version)$'
 }
 function Atomic-Copy([string]$Source, [string]$Target, [string]$Expected) {
     if ((Hash $Source) -ne $Expected) { throw "Source changed: $Source" }

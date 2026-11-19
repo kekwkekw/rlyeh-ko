@@ -8,7 +8,7 @@ namespace Rlyeh.Localizer.Core;
 
 public sealed class TranslationService
 {
-    private readonly record struct Job(string Source, string Scope, string? Context, Action<string?, string?>? Done, string? ObservedSource = null);
+    private readonly record struct Job(string Source, string Scope, string? Context, Action<string?, string?>? Done, long ModeRevision, string? ObservedSource = null);
     private readonly Channel<Job> queue = Channel.CreateBounded<Job>(256);
     private readonly Channel<Job> uiQueue = Channel.CreateBounded<Job>(256);
     private readonly AutoResetEvent wake = new(false);
@@ -20,9 +20,12 @@ public sealed class TranslationService
     private readonly Action<string> log;
     private readonly int delayMs;
     public TextCatalog Catalog { get; }
-    public TranslationService(string root, string snapshot, Action<string> log, int delayMs = 0)
+    public MasterDisplayCache MasterDisplays { get; } = new();
+    public LocalizationSwitch Mode { get; }
+    public TranslationService(string root, string snapshot, Action<string> log, int delayMs = 0, LocalizationSwitch? mode = null)
     {
         this.root = root; this.snapshot = snapshot; this.log = log;
+        Mode = mode ?? new LocalizationSwitch();
         this.delayMs = Math.Clamp(delayMs, 0, 10000);
         try { Catalog = TextCatalog.Load(Path.Combine(root, "glossary", "text-catalog.json")); }
         catch (Exception ex) { log("Text catalog rejected; hdTrans remains available: " + ex.Message); Catalog = new(new TextCatalog.Document()); }
@@ -30,6 +33,10 @@ public sealed class TranslationService
     }
     public bool Request(string source, string scope, Action<string?, string?> done, string? context = null)
     {
+        long revision = Mode.Revision;
+        if (!Mode.Accepts(revision)) return false;
+        var callback = done;
+        done = (value, error) => { if (Mode.Accepts(revision)) callback(value, error); };
         if (TryGetReady(source, scope, out string translation, context))
         { completions.Enqueue(() => done(translation, null)); return true; }
         string observedSource = source;
@@ -51,7 +58,7 @@ public sealed class TranslationService
                 };
             }
         }
-        bool accepted = (scope == "ui" ? uiQueue : queue).Writer.TryWrite(new(source, scope, context, done, observedSource));
+        bool accepted = (scope == "ui" ? uiQueue : queue).Writer.TryWrite(new(source, scope, context, done, revision, observedSource));
         if (accepted) wake.Set();
         return accepted;
     }
@@ -59,6 +66,14 @@ public sealed class TranslationService
     // The diagnostic delay still exercises the asynchronous engine path.
     public bool TryGetReady(string source, string scope, out string translation, string? context = null)
     {
+        long revision = Mode.Revision;
+        if (Mode.Accepts(revision) && TryGetReadyEnabled(source, scope, out translation, context) && Mode.Accepts(revision)) return true;
+        translation = "";
+        return false;
+    }
+    private bool TryGetReadyEnabled(string source, string scope, out string translation, string? context)
+    {
+        if (scope == "ui" && MasterDisplays.TryGet(source, out translation)) return true;
         if (scope == "ui")
         {
             int match = Catalog.LookupUi(source, context, out translation);
@@ -90,7 +105,7 @@ public sealed class TranslationService
             return false;
         }
         // Preserve UI context evidence. The worker owns disk writes.
-        if (scope == "ui" && uiQueue.Writer.TryWrite(new(source, scope, context, null))) wake.Set();
+        if (scope == "ui" && uiQueue.Writer.TryWrite(new(source, scope, context, null, Mode.Revision))) wake.Set();
         return true;
     }
     public void Drain() { for (int n = 0; n < 64 && completions.TryDequeue(out var action); n++) action(); }
@@ -137,6 +152,7 @@ public sealed class TranslationService
             while (true)
             {
                 if (!queue.Reader.TryRead(out var job) && !uiQueue.Reader.TryRead(out job)) { wake.WaitOne(); continue; }
+                if (!Mode.Accepts(job.ModeRevision)) continue;
                 try
                 {
                     string key = CacheKey(job.Source, job.Scope);
@@ -150,6 +166,7 @@ public sealed class TranslationService
                     var done = job.Done;
                     if (done == null) continue;
                     if (delayMs > 0) Thread.Sleep(delayMs);
+                    if (!Mode.Accepts(job.ModeRevision)) continue;
                     if (!cache.TryGetValue(key, out string? value))
                     {
                         if (!exact.TryGetValue(key, out value) && !exact.TryGetValue(job.Source, out value))

@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-18",
+  "tool": "built-in image_gen",
+  "reference": "https://github.com/kekwkekw/gctrans/commit/dc57a9cdc4c756e334e76aa8fbebf23211cd7cac",
+  "policy": "Generated text regions are composited onto original character-introduction artwork. Logos and theme cards are generated localized variants. Battle glow uses the same alpha as its translated lettering.",
+  "assets": [
+    {
+      "id": "sidsel",
+      "prompt": "Korean text-localization edit of the attached game loading introduction artwork. Preserve the exact 2048x920 complete canvas and composition. Preserve the adult character's identity, face, expression, hairstyle, clothing, pose, mechanical arms, lightning, architecture, background textures and illustration. Replace only Japanese text in its existing areas; do not redesign the artwork or add anything. Keep English 'Sidsel Me' and emblem unchanged. Korean heading: 시젤=메. Affiliation: 소속 · 카오스. Left white quote in the original vertical quote area, exactly: 넌 날 짜릿하게 해 줄 수 있을까!? Body in the existing lower right translucent panel in bold readable white Korean, all lines comfortably fitting: 거대한 이형의 팔을 다루는 칠흑의 바이스.\n몸에 두른 보랏빛 번개는 감정에 따라 강약이 달라진다.\n특히 ‘좋아하는’ 것을 만났을 때 강해지기에,\n그녀는 이 짜릿함을 무의식적인 호감도 센서로 의지한다.\n번개가 방출될 때마다 그녀 자신까지 상처 입지만,\n그것이 ‘정말 기분 좋다♡’고 한다.\nRemove the original Japanese glyphs cleanly, spell the Korean exactly. Keep original colors, panel and ornament. No added captions, no borders, no cropped edges. Opaque background. Output original 2048x920 canvas."
+    },
+    {
+      "id": "neon",
+      "prompt": "Use case: text-localization. Edit target: the attached original 2048x920 game loading introduction artwork. Produce the SAME complete 2048x920 canvas and composition. Replace Japanese lettering only with the following Korean translation. Preserve the adult character, clothing, face, pose, monsters, architecture, colors, light, textures and every decoration. No redraw of the illustration. Keep the English Neon label and emblem. Name heading: 네온. Affiliation line: 소속 · 루루이에. The left quote in white readable Korean across a few lines occupying the original quote area: 너는 내 전리품이니까,\n가슴에 확실히 새겨 둬! Body in the original lower right translucent panel, elegant bold white Korean text, comfortably fitting all lines: 「임무 도둑」이라 불리는 루루이에의 바이스.\n루루이에 소녀대의 임무에 불쑥 끼어들어\n공적을 가로채며 생계를 꾸리고 있다.\n소녀대에게 눈엣가시로 여겨지지만 실력만큼은 인정받는다.\n그런 그녀가 눈독을 들인 것은, 적도 아군도 혈안이 되어 찾는\n「은 열쇠의 계승자」. 바로 당신이다.\nAll Korean must be exactly spelled. Remove original Japanese glyphs cleanly. Preserve background outside text areas. Opaque background, no added captions or borders."
+    },
+    {
+      "id": "herenoir",
+      "prompt": "Edit target attached game loading introduction artwork. Korean text-localization only. Keep exact 2048x920 canvas, the adult character's identity, face, body, clothing and pose, architecture, magical lights, book, palette and complete original composition. Replace Japanese lettering in its original text areas, preserve the English Herenoir label and emblem. Heading 엘레누아르. Affiliation 소속 · 카르코사. Left white vertical quote, Korean: 밤바람은 손으로 잡을 수 없듯이,\n나는 여기 있어. Lower right body in white bold readable Korean, all fitting panel: 카르코사의 마술사.\n느긋하고 차분한 성격의 게으름뱅이처럼 보이지만,\n현존하는 카르코사 최고의 마술사로 손꼽힌다.\n강대한 힘을 지녔어도 어떤 상황에서든 자기 페이스를 지킨다.\n그 때문에 차갑게 느껴지기도 하고, 동료를 걱정하는 모습을 보여도\n그 감정이나 진심을 이해받지 못할 때가 있다. Remove all Japanese original glyphs. Change lettering only. No extra text, no borders. Output original canvas 2048x920."
+    },
+    {
+      "id": "igna",
+      "prompt": "Edit target attached game loading introduction artwork. Korean text-localization only. Keep exact 2048x920 canvas and original complete composition. Preserve the adult red-haired character, identity, face, clothing, gun, pose, fire, architecture and palette. Preserve English Igna and emblem. Replace Japanese text: Heading 이그나. Affiliation 소속 · 아캄. Left white quote across original vertical quote area: 나한테 닿으면 모두 타버려.\n적도, 동료도. Body in existing lower right panel, bold white Korean, all lines comfortably fitting: 불꽃처럼 붉은 머리카락이 특징인 바이스.\n개조한 머신건으로 화염탄을 끊임없이 퍼부으며 싸운다.\n퉁명스럽고 거친 말로 상대를 밀어내는 일이 많다.\n하지만 곤경에 처한 아이에게 말을 거는 등,\n남을 배려하는 행동을 보이기도 한다.\n그녀가 이토록 냉담하게 구는 데에는 이유가 있는 듯한데……? Remove original Japanese cleanly. Change lettering only. No extra content. Output 2048x920."
+    },
+    {
+      "id": "title",
+      "prompt": "Text-localization of the attached transparent black ornate Japanese game title logo. Create a Korean localized version on an exactly 1032x456 transparent canvas. Retain the source's black monochrome etched gothic calligraphy, sweeping ornamental tentacle curls and detailed fantastical occult game-logo styling. The main title text must read exactly 사신전기 on the first line and 루루이에 소녀대 on the second. Keep a prominent X at upper right like source. The Korean title must be readable at small size, with sharp expressive black strokes on fully transparent background. Preserve original centered occupied area and proportional blank margins. Do not include Japanese lettering, English subtitles or new slogans. This is a Korean localization of the provided logo, matching its appearance."
+    },
+    {
+      "id": "win",
+      "prompt": "Text-localization edit of the attached battle result lettering, with transparent background. Produce a Korean replacement reading exactly '방어 성공'. Elegant dark near-black green Korean serif calligraphy, strong varied strokes matching the attached Japanese brush/Mincho style, widely spaced horizontally, centered. Exact original canvas 536x156 including transparent margins, the Korean letters filling approximately 95% width and 85% height. Preserve monochrome lettering style. Only the two Korean words '방어 성공', no Japanese, no other text, no decorative background, no border. Use actual transparent alpha."
+    },
+    {
+      "id": "lose",
+      "prompt": "Text-localization edit of the attached battle result lettering, with transparent background. Produce a Korean replacement reading exactly '방어 실패'. Elegant dark near-black green Korean serif calligraphy, strong varied strokes matching the attached Japanese brush/Mincho style, widely spaced horizontally, centered. Exact original canvas 536x156 including transparent margins, the Korean letters filling approximately 95% width and 85% height. Preserve monochrome lettering style. Only the two Korean words '방어 실패', no Japanese, no other text, no decorative background, no border. Use actual transparent alpha."
+    },
+    {
+      "id": "theme1_logo",
+      "prompt": "Text-localization edit target is the attached transparent Japanese fantasy-game theme logo. Replace Japanese lettering with exactly the Korean title '붉은 잠의 꽃밭을 넘어', arranged in two readable lines: 붉은 잠의\n꽃밭을 넘어. Preserve the original distinctive colors, gradients, decorative outline and ornamental motifs, with the new Korean lettering in the same expressive fantasy calligraphic style. Sharp clean spelling, readable at small size. Keep the logo centered on an exactly 800x400 transparent canvas with proportionate margins, no cropping of the outer glow or decorations. No Japanese glyphs or added slogans. Genuine transparent alpha outside the logo."
+    },
+    {
+      "id": "theme1_card",
+      "prompt": "Text-localization edit of the attached 588x264 fantasy game theme selection banner. Replace all Japanese title lettering with exactly '붉은 잠의 꽃밭을 넘어', in two lines '붉은 잠의\n꽃밭을 넘어'. Match the original colorful calligraphic outlined fantasy logo style, color palette and decorative motifs. Preserve the original surrounding illustrated background and the original complete rectangular canvas; do not crop or change layout. Korean must be very readable at 294x132 screen display. Exact 588x264 output with no added margins, title centered within original bounds. No Japanese glyphs and no extra captions."
+    },
+    {
+      "id": "theme2_logo",
+      "prompt": "Text-localization edit target is the attached transparent Japanese fantasy-game theme logo. Replace Japanese lettering with exactly the Korean title '황금 열매는 누구를 위하여', arranged in two readable lines: 황금 열매는\n누구를 위하여. Preserve the original distinctive colors, gradients, decorative outline and ornamental motifs, with the new Korean lettering in the same expressive fantasy calligraphic style. Sharp clean spelling, readable at small size. Keep the logo centered on an exactly 800x400 transparent canvas with proportionate margins, no cropping of the outer glow or decorations. No Japanese glyphs or added slogans. Genuine transparent alpha outside the logo."
+    },
+    {
+      "id": "theme2_card",
+      "prompt": "Text-localization edit of the attached 588x264 fantasy game theme selection banner. Replace all Japanese title lettering with exactly '황금 열매는 누구를 위하여', in two lines '황금 열매는\n누구를 위하여'. Match the original colorful calligraphic outlined fantasy logo style, color palette and decorative motifs. Preserve the original surrounding illustrated background and the original complete rectangular canvas; do not crop or change layout. Korean must be very readable at 294x132 screen display. Exact 588x264 output with no added margins, title centered within original bounds. No Japanese glyphs and no extra captions."
+    },
+    {
+      "id": "theme3_logo",
+      "prompt": "Text-localization edit target is the attached transparent Japanese fantasy-game theme logo. Replace Japanese lettering with exactly the Korean title '푸른 종말에 각성의 칼날을', arranged in two readable lines: 푸른 종말에\n각성의 칼날을. Preserve the original distinctive colors, gradients, decorative outline and ornamental motifs, with the new Korean lettering in the same expressive fantasy calligraphic style. Sharp clean spelling, readable at small size. Keep the logo centered on an exactly 800x400 transparent canvas with proportionate margins, no cropping of the outer glow or decorations. No Japanese glyphs or added slogans. Genuine transparent alpha outside the logo."
+    },
+    {
+      "id": "theme3_card",
+      "prompt": "Text-localization edit of the attached 588x264 fantasy game theme selection banner. Replace all Japanese title lettering with exactly '푸른 종말에 각성의 칼날을', in two lines '푸른 종말에\n각성의 칼날을'. Match the original colorful calligraphic outlined fantasy logo style, color palette and decorative motifs. Preserve the original surrounding illustrated background and the original complete rectangular canvas; do not crop or change layout. Korean must be very readable at 294x132 screen display. Exact 588x264 output with no added margins, title centered within original bounds. No Japanese glyphs and no extra captions."
+    },
+    {
+      "id": "theme4_logo",
+      "prompt": "Text-localization edit target is the attached transparent Japanese fantasy-game theme logo. Replace Japanese lettering with exactly the Korean title '불꽃을 부수는 자, 황야에 피어나다', arranged in two readable lines: 불꽃을 부수는 자,\n황야에 피어나다. Preserve the original distinctive colors, gradients, decorative outline and ornamental motifs, with the new Korean lettering in the same expressive fantasy calligraphic style. Sharp clean spelling, readable at small size. Keep the logo centered on an exactly 800x400 transparent canvas with proportionate margins, no cropping of the outer glow or decorations. No Japanese glyphs or added slogans. Genuine transparent alpha outside the logo."
+    },
+    {
+      "id": "theme4_card",
+      "prompt": "Text-localization edit of the attached 588x264 fantasy game theme selection banner. Replace all Japanese title lettering with exactly '불꽃을 부수는 자, 황야에 피어나다', in two lines '불꽃을 부수는 자,\n황야에 피어나다'. Match the original colorful calligraphic outlined fantasy logo style, color palette and decorative motifs. Preserve the original surrounding illustrated background and the original complete rectangular canvas; do not crop or change layout. Korean must be very readable at 294x132 screen display. Exact 588x264 output with no added margins, title centered within original bounds. No Japanese glyphs and no extra captions."
+    },
+    {
+      "id": "theme5_logo",
+      "prompt": "Text-localization edit target is the attached transparent Japanese fantasy-game theme logo. Replace Japanese lettering with exactly the Korean title '얼터 에고이스트의 장난', arranged in two readable lines: 얼터 에고이스트의\n장난. Preserve the original distinctive colors, gradients, decorative outline and ornamental motifs, with the new Korean lettering in the same expressive fantasy calligraphic style. Sharp clean spelling, readable at small size. Keep the logo centered on an exactly 800x400 transparent canvas with proportionate margins, no cropping of the outer glow or decorations. No Japanese glyphs or added slogans. Genuine transparent alpha outside the logo."
+    },
+    {
+      "id": "theme5_card",
+      "prompt": "Text-localization edit of the attached 588x264 fantasy game theme selection banner. Replace all Japanese title lettering with exactly '얼터 에고이스트의 장난', in two lines '얼터 에고이스트의\n장난'. Match the original colorful calligraphic outlined fantasy logo style, color palette and decorative motifs. Preserve the original surrounding illustrated background and the original complete rectangular canvas; do not crop or change layout. Korean must be very readable at 294x132 screen display. Exact 588x264 output with no added margins, title centered within original bounds. No Japanese glyphs and no extra captions."
+    }
+  ],
+  "preparation": "Original Sprite canvas and trim offsets restored with System.Drawing. Character-introduction text rectangles use a 12px edge blend. Battle lettering and its paired white glow receive the same 2px white contrast outline."
+}
