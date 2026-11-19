@@ -25,8 +25,11 @@ function Run([string]$Package, [string]$Mode, [string]$Game, [string]$Receipt, [
     $arguments = @('-NoProfile','-ExecutionPolicy','Bypass','-File',(Join-Path $Package 'Install.ps1'),'-Mode',$Mode)
     if ($Game) { $arguments += @('-GameRoot',$Game) }
     if ($Receipt) { $arguments += @('-Receipt',$Receipt) }
-    $lines = & $shell @arguments 2>&1
-    $code = $LASTEXITCODE
+    try {
+        $ErrorActionPreference = 'Continue' # Collect expected native stderr on PowerShell 5.1 too.
+        $lines = & $shell @arguments 2>&1
+        $code = $LASTEXITCODE
+    } finally { $ErrorActionPreference = 'Stop' }
     $output = $lines | Out-String
     Write-Host $output
     if (($code -eq 0) -eq [bool]$Fails) { throw "Unexpected installer exit code: $Mode / $code" }
@@ -61,7 +64,8 @@ function Check-User($Files) {
 }
 
 Run $CurrentPackage VerifyPackage | Out-Null
-$game = Fixture '업그레이드 시험'
+$unicode = -join ([char[]](0xD55C,0xAE00)) # Portable Korean path on Windows PowerShell 5.1, without relying on script encoding.
+$game = Fixture ('upgrade space ' + $unicode)
 $original = Join-Path $game 'doorstop_config.ini'
 [IO.File]::WriteAllText($original, 'Original loader configuration')
 $originalHash = Hash $original
@@ -101,7 +105,7 @@ Run $CurrentPackage Restore $game $oldReceipt | Out-Null
 if ((Hash $original) -ne $originalHash -or (Hash (Join-Path $game 'rlyehshoujotaix_cl.exe')) -ne $exeHash) { throw 'Original fixture files changed' }
 Check-User $user
 
-$fresh = Fixture '신규 설치 시험'
+$fresh = Fixture ('fresh space ' + $unicode)
 $freshReceipt = Receipt (Run $CurrentPackage Install $fresh)
 Check-Files $fresh $currentFiles
 $freshUser = User-Data $fresh
