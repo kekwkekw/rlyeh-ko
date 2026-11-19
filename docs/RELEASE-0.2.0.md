@@ -1,6 +1,6 @@
 # Rlyeh Local Korean v0.2.0
 
-2026-11-20 배포 준비본. Windows판 Unity 6000.3.5f2를 대상으로 한다.
+2026-11-20. Windows판 Unity 6000.3.5f2를 대상으로 한다.
 설치 파일은 `Rlyeh-Local-Korean-0.2.0-hdTrans-0.9.5.zip`, 대응 소스는
 `rlyeh-localizer-0.2.0-source.zip`이며 `SHA256SUMS.txt`로 두 ZIP을 검사한다.
 게시된 파일은 [공식 저장소 Releases](https://github.com/kekwkekw/rlyeh-local-korean/releases)에서 확인한다.
