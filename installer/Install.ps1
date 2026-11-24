@@ -51,6 +51,154 @@ function Save-Receipt($Value, [string]$Path) {
     if ([IO.File]::Exists($Path)) { [IO.File]::Replace($temp, $Path, [NullString]::Value) }
     else { [IO.File]::Move($temp, $Path) }
 }
+function Find-GameRoots {
+    $candidates = New-Object System.Collections.Generic.List[string]
+    $seen = @{}
+    $add = {
+        param([string]$Dir)
+        if ([string]::IsNullOrWhiteSpace($Dir)) { return }
+        try {
+            if (!(Test-Path -LiteralPath $Dir -PathType Container)) { return }
+            $full = (Resolve-Path -LiteralPath $Dir).Path.TrimEnd('\')
+            if ($seen.ContainsKey($full.ToLowerInvariant())) { return }
+            if (Test-Path -LiteralPath (Join-Path $full 'rlyehshoujotaix_cl.exe') -PathType Leaf) {
+                $seen[$full.ToLowerInvariant()] = $true
+                $candidates.Add($full) | Out-Null
+            }
+        } catch {}
+    }
+    if ($env:APPDATA) {
+        $dmmCfg = Join-Path $env:APPDATA 'dmmgameplayer5\dmmgame.cnf'
+        if (Test-Path -LiteralPath $dmmCfg -PathType Leaf) {
+            try {
+                $cfg = Get-Content -LiteralPath $dmmCfg -Raw -Encoding UTF8 | ConvertFrom-Json
+                foreach ($item in @($cfg.contents)) {
+                    if ($item -and $item.PSObject.Properties['detail'] -and $item.detail -and $item.detail.PSObject.Properties['path']) {
+                        & $add ([string]$item.detail.path)
+                    }
+                }
+            } catch {}
+        }
+    }
+    if ($env:USERPROFILE) { & $add (Join-Path $env:USERPROFILE 'rlyehshoujotaix_cl') }
+    foreach ($root in @('C:\Games','D:\Games','E:\Games','C:\DMMGamePlayer','D:\DMMGamePlayer','C:\','D:\','E:\')) {
+        & $add (Join-Path $root 'rlyehshoujotaix_cl')
+    }
+    if ($env:ProgramFiles) { & $add (Join-Path $env:ProgramFiles 'DMMGamePlayer\Games\rlyehshoujotaix_cl') }
+    if (${env:ProgramFiles(x86)}) { & $add (Join-Path ${env:ProgramFiles(x86)} 'DMMGamePlayer\Games\rlyehshoujotaix_cl') }
+    return @($candidates.ToArray())
+}
+function Open-FolderDialog([string]$InitialPath) {
+    if ([Threading.Thread]::CurrentThread.GetApartmentState() -ne [Threading.ApartmentState]::STA) { return $null }
+    try {
+        Add-Type -AssemblyName System.Windows.Forms -ErrorAction Stop
+        $owner = New-Object System.Windows.Forms.Form
+        $owner.TopMost = $true
+        $dlg = New-Object System.Windows.Forms.FolderBrowserDialog
+        $dlg.Description = 'Select the game folder containing rlyehshoujotaix_cl.exe'
+        $dlg.ShowNewFolderButton = $false
+        if ($InitialPath -and (Test-Path -LiteralPath $InitialPath -PathType Container)) { $dlg.SelectedPath = $InitialPath }
+        try {
+            if ($dlg.ShowDialog($owner) -eq [System.Windows.Forms.DialogResult]::OK) { return $dlg.SelectedPath }
+        } finally { $dlg.Dispose(); $owner.Dispose() }
+    } catch {}
+    return $null
+}
+function Open-ReceiptDialog([string]$InitialDir) {
+    if ([Threading.Thread]::CurrentThread.GetApartmentState() -ne [Threading.ApartmentState]::STA) { return $null }
+    try {
+        Add-Type -AssemblyName System.Windows.Forms -ErrorAction Stop
+        $owner = New-Object System.Windows.Forms.Form
+        $owner.TopMost = $true
+        $dlg = New-Object System.Windows.Forms.OpenFileDialog
+        $dlg.Title = 'Select backup receipt (manifest.json)'
+        $dlg.Filter = 'Backup receipt (manifest.json)|manifest.json|JSON files (*.json)|*.json'
+        $dlg.CheckFileExists = $true
+        if ($InitialDir -and (Test-Path -LiteralPath $InitialDir -PathType Container)) { $dlg.InitialDirectory = $InitialDir }
+        try {
+            if ($dlg.ShowDialog($owner) -eq [System.Windows.Forms.DialogResult]::OK) { return $dlg.FileName }
+        } finally { $dlg.Dispose(); $owner.Dispose() }
+    } catch {}
+    return $null
+}
+function Select-GameRoot {
+    $found = @(Find-GameRoots)
+    if ($found.Count -gt 0) {
+        Write-Host 'Detected game folder(s):'
+        for ($i = 0; $i -lt $found.Count; $i++) { Write-Host ("  [{0}] {1}" -f ($i + 1), $found[$i]) }
+        $answer = (Read-Host 'Press Enter for [1], enter a number, type B to open folder picker, or paste a folder path').Trim().Trim('"')
+        if ([string]::IsNullOrWhiteSpace($answer)) { return $found[0] }
+        if ($answer -match '^\d+$') {
+            $idx = [int]$answer - 1
+            if ($idx -ge 0 -and $idx -lt $found.Count) { return $found[$idx] }
+            throw "Invalid selection: $answer"
+        }
+        if ($answer -ieq 'B') {
+            $picked = Open-FolderDialog $found[0]
+            if (!$picked) { throw 'Folder selection cancelled' }
+            return $picked
+        }
+        return $answer
+    }
+    $answer = (Read-Host 'Game folder containing rlyehshoujotaix_cl.exe (press Enter or B to open folder picker, or paste path)').Trim().Trim('"')
+    if ([string]::IsNullOrWhiteSpace($answer) -or $answer -ieq 'B') {
+        $picked = Open-FolderDialog ''
+        if (!$picked) {
+            $answer = (Read-Host 'Paste the game folder path containing rlyehshoujotaix_cl.exe').Trim().Trim('"')
+            if ([string]::IsNullOrWhiteSpace($answer)) { throw 'No game folder provided' }
+            return $answer
+        }
+        return $picked
+    }
+    return $answer
+}
+function Select-RestoreReceipt([string]$Game) {
+    $backupRoot = Safe-Path $Game 'RlyehPatchBackups'
+    $all = @()
+    if (Test-Path -LiteralPath $backupRoot -PathType Container) {
+        foreach ($dir in @(Get-ChildItem -LiteralPath $backupRoot -Directory -ErrorAction SilentlyContinue | Sort-Object Name -Descending)) {
+            $mp = Join-Path $dir.FullName 'manifest.json'
+            if (!(Test-Path -LiteralPath $mp -PathType Leaf)) { continue }
+            try {
+                $rec = Get-Content -LiteralPath $mp -Raw -Encoding UTF8 | ConvertFrom-Json
+                if ($rec.schema -eq 1) {
+                    $all += [pscustomobject]@{ id=$dir.Name; path=$mp; package=$rec.package; status=$rec.status; count=@($rec.files).Count }
+                }
+            } catch {}
+        }
+    }
+    $active = @($all | Where-Object { $_.status -ne 'restored' })
+    $list = @(if ($active.Count -gt 0) { $active } else { $all })
+    if ($list.Count -gt 0) {
+        Write-Host 'Available backup receipts (newest first):'
+        for ($i = 0; $i -lt $list.Count; $i++) {
+            $r = $list[$i]
+            Write-Host ("  [{0}] {1}  (package {2}, {3} files, status: {4})" -f ($i + 1), $r.id, $r.package, $r.count, $r.status)
+        }
+        $answer = (Read-Host 'Press Enter for [1], enter a number, type B to browse for manifest.json, or paste a path').Trim().Trim('"')
+        $chosen = $null
+        if ([string]::IsNullOrWhiteSpace($answer)) { $chosen = $list[0].path }
+        elseif ($answer -match '^\d+$') {
+            $idx = [int]$answer - 1
+            if ($idx -lt 0 -or $idx -ge $list.Count) { throw "Invalid selection: $answer" }
+            $chosen = $list[$idx].path
+        } elseif ($answer -ieq 'B') {
+            $chosen = Open-ReceiptDialog $backupRoot
+            if (!$chosen) { throw 'Receipt selection cancelled' }
+        } else { $chosen = $answer }
+        $confirm = (Read-Host ("Restore using {0}? Type Y to continue" -f $chosen)).Trim()
+        if ($confirm -ine 'Y') { throw 'Restore cancelled by user' }
+        return $chosen
+    }
+    Write-Host "No backup receipts found under: $backupRoot"
+    $answer = (Read-Host 'Press Enter or B to browse for manifest.json, or paste its path').Trim().Trim('"')
+    if ([string]::IsNullOrWhiteSpace($answer) -or $answer -ieq 'B') {
+        $picked = Open-ReceiptDialog $backupRoot
+        if (!$picked) { throw 'Restore requires -Receipt <manifest.json>' }
+        return $picked
+    }
+    return $answer
+}
 function Verify-Package {
     $manifest = Get-Content -LiteralPath (Join-Path $PackageRoot 'package.json') -Raw -Encoding UTF8 | ConvertFrom-Json
     if ($manifest.schema -ne 1) { throw 'Unsupported package schema' }
@@ -72,14 +220,19 @@ function Verify-Package {
 }
 
 if ($Mode -eq 'Restore') {
-    if (!$Receipt) { throw 'Restore requires -Receipt <manifest.json>' }
+    if (!$Receipt) {
+        if (!$GameRoot) { $GameRoot = Select-GameRoot }
+        $GameRoot = (Resolve-Path -LiteralPath $GameRoot).Path.TrimEnd('\')
+        if (!(Test-Path -LiteralPath (Safe-Path $GameRoot 'rlyehshoujotaix_cl.exe') -PathType Leaf)) { throw 'Wrong game folder' }
+        $Receipt = Select-RestoreReceipt $GameRoot
+    }
     $Receipt = (Resolve-Path -LiteralPath $Receipt).Path
     $record = Get-Content -LiteralPath $Receipt -Raw -Encoding UTF8 | ConvertFrom-Json
     if ($record.schema -ne 1) { throw 'Unsupported recovery receipt' }
     if (!$GameRoot) { $GameRoot = $record.gameRoot }
 } else { $manifest = Verify-Package }
 if ($Mode -eq 'VerifyPackage') { return }
-if (!$GameRoot) { $GameRoot = (Read-Host 'Game folder containing rlyehshoujotaix_cl.exe').Trim().Trim('"') }
+if (!$GameRoot) { $GameRoot = Select-GameRoot }
 $GameRoot = (Resolve-Path -LiteralPath $GameRoot).Path.TrimEnd('\')
 if (!(Test-Path -LiteralPath (Safe-Path $GameRoot 'rlyehshoujotaix_cl.exe') -PathType Leaf)) { throw 'Wrong game folder' }
 if ($Mode -ne 'Plan' -and (Get-Process -Name 'rlyehshoujotaix_cl' -ErrorAction SilentlyContinue)) { throw 'Close the game first' }

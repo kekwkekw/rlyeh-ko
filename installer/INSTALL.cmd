@@ -1,5 +1,5 @@
 @echo off
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0Install.ps1" -Mode Install %*
+powershell.exe -NoProfile -ExecutionPolicy Bypass -STA -File "%~dp0Install.ps1" -Mode Install %*
 set "result=%errorlevel%"
 echo.
 if not "%result%"=="0" echo Installation stopped. Read the error above. No game was launched.

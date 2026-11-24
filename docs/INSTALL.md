@@ -4,11 +4,17 @@
 
 ## 설치
 
-1. 게임을 종료하고 ZIP 전체를 게임 폴더 밖에 풉니다. `payload`만 수동 복사하면 자동 백업 기록이 생기지 않습니다.
-2. 기존 다른 번역 패치가 있다면 게임 밖에 백업하고 먼저 제거합니다. 설치 도구는 다른 플러그인/patcher DLL을 발견하면 중단하며 자동 삭제하지 않습니다.
-3. `VERIFY.cmd`로 파일 무결성을 검사합니다.
-4. `INSTALL.cmd`를 실행하고 게임 폴더를 입력합니다. 설치 도구는 변경될 파일의 이전 바이트를 `게임폴더/RlyehPatchBackups/<시각-ID>/before/`에 저장하고 `manifest.json`을 기록합니다.
-5. 평소 사용하던 DMM 런처로 실행합니다. 첫 실행은 BepInEx interop 생성 때문에 오래 걸릴 수 있습니다. 번역에 필요한 hdTrans DLL과 사전은 모두 동봉합니다.
+1. **압축 해제 전 ZIP 차단 해제(권장)**: 브라우저에서 받은 설치 ZIP 파일을 마우스 오른쪽 클릭 → **속성** → **일반** 탭 하단의 **보안: `차단 해제` 체크 → 적용/확인**을 누릅니다.
+   - 반드시 **압축을 풀기 전** ZIP 파일에 적용해야 내부 스크립트(`INSTALL.cmd`, `Install.ps1`)와 DLL 전체의 인터넷 차단 표시가 함께 제거되어 SmartScreen 경고 및 DLL 로드 오류를 예방할 수 있습니다.
+   - `차단 해제` 항목이 표시되지 않으면 이미 차단 표시가 없는 상태이므로 그대로 진행합니다.
+   - 이미 압축을 푼 상태라면 압축 해제 폴더를 지우고 ZIP에 차단 해제를 적용한 뒤 다시 푸는 것이 가장 확실합니다.
+2. 게임을 종료하고 ZIP 전체를 게임 폴더 밖에 풉니다. `payload`만 수동 복사하면 자동 백업 기록이 생기지 않습니다.
+3. 기존 다른 번역 패치가 있다면 게임 밖에 백업하고 먼저 제거합니다. 설치 도구는 다른 플러그인/patcher DLL을 발견하면 중단하며 자동 삭제하지 않습니다.
+4. `VERIFY.cmd`로 파일 무결성을 검사합니다.
+5. `INSTALL.cmd`를 실행합니다. (`Windows의 PC 보호` 창이 뜨면 `추가 정보` → `실행`을 누릅니다.)
+   - 일반적인 DMM/게임 경로에 `rlyehshoujotaix_cl.exe`가 감지되면 기본 경로로 제안합니다. 그대로 `Enter`를 누르거나, `B`를 입력해 Windows 폴더 선택 창에서 고르거나, 폴더 경로를 직접 붙여넣을 수 있습니다.
+   - 설치 도구는 변경될 파일의 이전 바이트를 `게임폴더/RlyehPatchBackups/<시각-ID>/before/`에 저장하고 `manifest.json`을 기록합니다.
+6. 평소 사용하던 DMM 런처로 실행합니다. 첫 실행은 BepInEx interop 생성 때문에 오래 걸릴 수 있습니다. 번역에 필요한 hdTrans DLL과 사전은 모두 동봉합니다.
 
 PowerShell에서 직접 실행할 수도 있습니다. Windows PowerShell 5.1과 PowerShell 7을 지원 대상으로 합니다.
 
@@ -74,8 +80,11 @@ F2로 한국어화를 전체 전환하며 마지막 선택을 저장합니다. �
 
 ## 복구
 
-게임을 종료하고 설치 출력에 나온 `manifest.json`을 지정합니다.
-백업은 원래 게임 폴더 안의 위치를 유지해야 합니다.
+게임을 종료한 뒤 아래 두 방법 중 하나로 복구합니다. 백업은 원래 게임 폴더 안의 위치를 유지해야 합니다.
+
+1. **`RESTORE.cmd` 실행(간편 복구)**: `RESTORE.cmd`를 더블클릭하면 게임 폴더와 `RlyehPatchBackups` 안의 최신 백업 영수증 목록을 표시합니다. 번호 선택(기본 `[1]`) 또는 `B`(파일 선택 창)로 `manifest.json`을 고른 뒤 `Y`를 입력해 복구합니다.
+   - 특정 백업의 `manifest.json` 파일을 `RESTORE.cmd` 아이콘 위로 끌어다 놓아 바로 복구할 수도 있습니다.
+2. **PowerShell 직접 실행**: 설치 출력에 나온 `manifest.json` 경로를 직접 지정합니다.
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Install.ps1 -Mode Restore -Receipt 'C:\Games\rlyehshoujotaix_cl\RlyehPatchBackups\<시각-ID>\manifest.json'
