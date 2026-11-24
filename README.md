@@ -1,4 +1,4 @@
-# Rlyeh Local Korean
+# Rlyeh Korean
 
 사신전기 루루이에 소녀대 X Windows판의 비공식 한국어화 플러그인입니다.
 검수한 게임 전용 용어집·UI/스킬 문장집과 **동봉 hdTrans 0.9.5**로 번역합니다.
@@ -10,7 +10,7 @@
 **F2로 이미지·시나리오·Master·UI·hdTrans를 함께 ON/OFF**할 수 있습니다. [전환 안내](docs/toggle.md)
 시나리오 이름·세계관 용어의 적용 범위와 확장 절차는 [용어집 안내](docs/glossary.md), 최근 확인 범위와 확장 중단 판단은 [검수 기록](docs/glossary-validation-20261119.md)에 있습니다.
 DMM Windows판 Unity 6000.3.5f2에서 설치·복구, 스토리 재생과 대표 메뉴를 검증했습니다.
-설치 파일과 대응 소스는 [GitHub Releases](https://github.com/kekwkekw/rlyeh-local-korean/releases)에서 제공합니다.
+설치 파일과 대응 소스는 [GitHub Releases](https://github.com/kekwkekw/rlyeh-ko/releases)에서 제공합니다.
 
 ## 설치 파일
 

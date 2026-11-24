@@ -9,7 +9,7 @@ using Utage;
 
 namespace Rlyeh.Localizer;
 
-[BepInPlugin("local.rlyeh.korean", "Rlyeh Local Korean", "0.2.0")]
+[BepInPlugin("local.rlyeh.korean", "Rlyeh Korean", "0.2.0")]
 public sealed class Plugin : BasePlugin
 {
     internal static Plugin Instance = null!;

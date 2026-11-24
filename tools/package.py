@@ -64,7 +64,7 @@ def main():
     if stock_manifest!=lock['bepinex_files']: raise ValueError('Stock BepInEx inputs changed')
     files=source_files()
     out.mkdir(parents=True)
-    package=out/f'Rlyeh-Local-Korean-{VERSION}-hdTrans-0.9.5'
+    package=out/f'Rlyeh-Korean-{VERSION}-hdTrans-0.9.5'
     payload=package/'payload'
     def copy(src,relative):
         dest=package/relative

@@ -1,4 +1,4 @@
-# Rlyeh Local Korean installer. Copyright (c) 2026 kekwkekw. AGPL-3.0-only.
+# Rlyeh Korean installer. Copyright (c) 2026 kekwkekw. AGPL-3.0-only.
 # Windows PowerShell 5.1 and PowerShell 7. No download, game launch or global setting change.
 [CmdletBinding()]
 param(
